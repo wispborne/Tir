@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads.demo
+package com.thunderclouddev.tirforgoodreads
 
 import android.os.Bundle
 import android.support.v7.app.ActionBar
@@ -9,6 +9,9 @@ import com.bluelinelabs.conductor.Conductor
 import com.bluelinelabs.conductor.Router
 import com.bluelinelabs.conductor.RouterTransaction
 import com.thunderclouddev.tirforgoodreads.R
+import com.thunderclouddev.tirforgoodreads.R.id
+import com.thunderclouddev.tirforgoodreads.R.layout
+import com.thunderclouddev.tirforgoodreads.viewbooks.ViewBooksController
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -22,13 +25,13 @@ class MainActivity : AppCompatActivity(), ActionBarProvider {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.main_activity)
-        setSupportActionBar(findViewById(R.id.toolbar) as Toolbar)
+        setContentView(layout.main_activity)
+        setSupportActionBar(findViewById(id.toolbar) as Toolbar)
 
-        router = Conductor.attachRouter(this, findViewById(R.id.controller_container) as ViewGroup,
+        router = Conductor.attachRouter(this, findViewById(id.controller_container) as ViewGroup,
             savedInstanceState)
         if (!router!!.hasRootController()) {
-            router!!.setRoot(RouterTransaction.with(ViewBooksByAuthorController()))
+            router!!.setRoot(RouterTransaction.with(ViewBooksController()))
         }
     }
 

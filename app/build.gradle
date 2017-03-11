@@ -49,6 +49,7 @@ dependencies {
     // Data binding
     compile "com.android.support:appcompat-v7:$supportLibVersion"
     compile "com.android.support:design:$supportLibVersion"
+    compile 'com.android.support.constraint:constraint-layout:1.0.1'
     kapt "com.android.databinding:compiler:$gradle_version"
 
     // Kotlin
@@ -71,6 +72,8 @@ dependencies {
     }
     // RxJava for Retrofit
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
+    // Image loading
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 
     // Debug using chrome dev tools
     debugCompile 'com.facebook.stetho:stetho:1.4.1'

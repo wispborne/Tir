@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads.demo
+package com.thunderclouddev.tirforgoodreads
 
 import android.support.v7.app.ActionBar
 
