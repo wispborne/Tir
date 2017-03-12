@@ -82,7 +82,6 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
 
     private fun getBooksByAuthorFromDatabase(authorId: String) = database.getBooksByAuthor(authorId)
 
-
     private fun mapBooksApiToView(apiBook: com.thunderclouddev.tirforgoodreads.api.model.Book): Book {
         return Book(id = apiBook.id,
                 isbn = apiBook.isbn,

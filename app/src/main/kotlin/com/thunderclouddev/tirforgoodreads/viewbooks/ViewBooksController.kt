@@ -19,25 +19,19 @@ import io.reactivex.schedulers.Schedulers
  */
 class ViewBooksController : Controller() {
     private lateinit var binding: ViewBooksBinding
-    private val disposables = CompositeDisposable()
+    private lateinit var booksAdapter: ViewBooksAdapter
+    private lateinit var disposables: CompositeDisposable
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
+        disposables = CompositeDisposable()
         binding = DataBindingUtil.inflate<ViewBooksBinding>(inflater, R.layout.view_books, container, false)
         binding.bookList.layoutManager = LinearLayoutManager(activity)
         binding.booksRefreshLayout.setOnRefreshListener { refresh() }
 
-        val booksAdapter = ViewBooksAdapter(activity!!)
+        booksAdapter = ViewBooksAdapter(activity!!)
         binding.bookList.adapter = booksAdapter
 
-        disposables.add(BaseApp.data.createBooksByAuthorFromDatabaseObservable("18541")
-                .subscribeOn(Schedulers.io())
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe({ book ->
-                    TimberKt.v { "Reading book from db: $book" }
-                    booksAdapter.edit().add(ViewBooksAdapter.BookViewModel(book)).commit()
-                }, { error ->
-                    throw error
-                }))
+        readFromDatabase(booksAdapter)
 
         return binding.root
     }
@@ -47,7 +41,9 @@ class ViewBooksController : Controller() {
                 fetchBooksByAuthor("18541")
                         .doOnSubscribe { binding.booksRefreshLayout.isRefreshing = true }
                         .doOnTerminate { binding.booksRefreshLayout.isRefreshing = false }
-                        .subscribe())
+                        .subscribe({}, { error ->
+
+                        }))
     }
 
     override fun onDestroyView(view: View) {
@@ -55,7 +51,18 @@ class ViewBooksController : Controller() {
         super.onDestroyView(view)
     }
 
-    // TODO("Split into two methods")
+    private fun readFromDatabase(booksAdapter: ViewBooksAdapter) {
+        disposables.add(BaseApp.data.createBooksByAuthorFromDatabaseObservable("18541")
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribe({ book ->
+                    TimberKt.v { "Reading book from db: $book" }
+                    booksAdapter.edit().add(ViewBooksAdapter.BookViewModel(book)).commit()
+                }, { error ->
+                    throw error
+                }))
+    }
+
     private fun fetchBooksByAuthor(authorId: String) = BaseApp.data.queryBooksByAuthorFromApi(authorId)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
