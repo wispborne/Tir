@@ -29,11 +29,11 @@ class ViewBooksController : Controller() {
         val booksAdapter = ViewBooksAdapter(activity!!)
         binding.bookList.adapter = booksAdapter
 
-        disposables.add(BaseApp.data.booksByAuthor("23423")
+        disposables.add(BaseApp.data.createBooksByAuthorFromDatabaseObservable("18541")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe({ book ->
-                    TimberKt.d { "Reading book from db: $book" }
+                    TimberKt.v { "Reading book from db: $book" }
                     booksAdapter.edit().add(ViewBooksAdapter.BookViewModel(book)).commit()
                 }, { error ->
                     throw error
@@ -44,7 +44,7 @@ class ViewBooksController : Controller() {
 
     fun refresh() {
         disposables.add(
-                fetchBooksByAuthor("23423")
+                fetchBooksByAuthor("18541")
                         .doOnSubscribe { binding.booksRefreshLayout.isRefreshing = true }
                         .doOnTerminate { binding.booksRefreshLayout.isRefreshing = false }
                         .subscribe())
@@ -56,7 +56,7 @@ class ViewBooksController : Controller() {
     }
 
     // TODO("Split into two methods")
-    private fun fetchBooksByAuthor(authorId: String) = BaseApp.data.fetchBooksByAuthorFromApi(authorId)
+    private fun fetchBooksByAuthor(authorId: String) = BaseApp.data.queryBooksByAuthorFromApi(authorId)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
 }

@@ -7,41 +7,28 @@ import com.thunderclouddev.tirforgoodreads.empty
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
 import com.thunderclouddev.tirforgoodreads.model.Author
 import com.thunderclouddev.tirforgoodreads.model.Book
+import io.reactivex.Completable
 import io.reactivex.Observable
 import org.threeten.bp.ZonedDateTime
 import org.threeten.bp.format.DateTimeFormatter
 
 /**
+ * Main data source, which manages caching.
  * @author David Whitman on 12 Mar, 2017.
  */
 class Data(private val api: GoodreadsApi, private val database: RequeryDatabase) {
 
-    fun booksByAuthor(authorId: String): Observable<Book> {
+    fun createBooksByAuthorFromDatabaseObservable(authorId: String): Observable<Book> {
         return getBooksByAuthorFromDatabase(authorId)
                 .map { mapBookDatabaseToView(it) }
     }
 
-    fun fetchBooksByAuthorFromApi(authorId: String) = api.getAuthorBooks()
-            .doOnSuccess { books ->
-                //                putBooks(books.author.books.items.map { mapBooksApiToView(it) })
-                database.putBooks(books.author.books.items
-                        .map { mapBooksApiToView(it) } // TODO: Write direct mapping instead of using two
-                        .map {
-                            val databaseEntity = mapBookViewToDatabase(it)
-                            // Store authors as we go
-                            database.putAuthors(databaseEntity.second).subscribe({ addedAuthors ->
-                                TimberKt.v { "Put $addedAuthors" }
-                            }, { error ->
-                                TimberKt.e(error, { "Error putting $error" })
-                            })
-                            databaseEntity.first
-                        })
-                        .subscribe({}, { error ->
+    fun queryBooksByAuthorFromApi(authorId: String): Completable = api.getAuthorBooks(authorId)
+            .doOnSuccess { (_, author) ->
+                cacheBooks(author.books.items.map { mapBooksApiToView(it) })
+                        .subscribe({ }, { error ->
                             TimberKt.e(error, { error.message ?: String.empty })
                         })
-            }
-            .doOnSuccess {
-                //                database.putAuthors()
             }
             .toCompletable()
 
@@ -68,22 +55,18 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
             published = databaseBook.published,
             authors = databaseBook.authors.map { mapAuthorsDatabaseToView(it as AuthorEntity) })
 
-    private fun putBooks(books: List<Book>) {
-        database.putBooks(books.map {
-            mapBookViewToDatabase(it).first
-        })
-
-        books.map(Book::authors)
-                .filter { it.isNotEmpty() }
-                .forEach { authors ->
-                    database.putAuthors(authors.map { author -> mapAuthorViewToDatabase(author) })
-                            .subscribe({ addedAuthors ->
-                                TimberKt.v { "Put $addedAuthors" }
-                            }, { error ->
-                                TimberKt.e(error, { "Error putting $error" })
-                            })
-                }
-    }
+    private fun cacheBooks(books: List<Book>) =
+            database.putBooks(books
+                    .map {
+                        val databaseEntity = mapBookViewToDatabase(it)
+                        // Cache authors
+                        database.putAuthors(databaseEntity.second).subscribe({ addedAuthors ->
+                            TimberKt.v { "Put $addedAuthors" }
+                        }, { error ->
+                            TimberKt.e(error, { "Error putting $error" })
+                        })
+                        databaseEntity.first
+                    })
 
     private fun mapAuthorsDatabaseToView(databaseAuthor: AuthorEntity) = Author(
             id = databaseAuthor.id,

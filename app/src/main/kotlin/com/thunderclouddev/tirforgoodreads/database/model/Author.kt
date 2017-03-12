@@ -11,7 +11,7 @@ import io.requery.query.MutableResult
  */
 @Entity
 interface Author {
-    @get:Key val id: Int
+    @get:Key val id: String
     @get:Index val name: String
     val link: String
     val imageUrl: String

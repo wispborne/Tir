@@ -4,7 +4,7 @@ package com.thunderclouddev.tirforgoodreads.model
  * Created by David Whitman on 11 Mar, 2017.
  */
 data class Author(
-        val id: Int,
+        val id: String,
         val name: String,
         val link: String,
         val imageUrl: String,
