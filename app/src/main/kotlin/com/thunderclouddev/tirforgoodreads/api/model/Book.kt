@@ -6,7 +6,7 @@ import org.simpleframework.xml.ElementList
 /**
  * @author David Whitman on 11 Mar, 2017.
  */
-data class Book(val id: Int,
+data class Book(@field:Element(name = "id") var id: String,
                 @field:Element(name = "isbn", required = false) var isbn: String,
                 @field:Element(name = "isbn13", required = false) var isbn13: String,
                 @field:Element(name = "title", required = false) var title: String,
@@ -29,7 +29,7 @@ data class Book(val id: Int,
                 @field:Element(name = "published", required = false) var published: String, // Year
                 @field:Element(name = "authors") var authors: Authors
 ) {
-    constructor() : this(0, "", "", "", 0, "", "", "", "", "", 0, "", "", "", 0, 0, 0, 0.00, 0, "",
+    constructor() : this("", "", "", "", 0, "", "", "", "", "", 0, "", "", "", 0, 0, 0, 0.00, 0, "",
             "", Authors())
 
     data class Authors(@field:ElementList(inline = true, entry = "author") var items: ArrayList<Author>) {

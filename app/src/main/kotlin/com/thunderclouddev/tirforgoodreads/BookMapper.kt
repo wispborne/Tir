@@ -7,6 +7,7 @@ import com.thunderclouddev.tirforgoodreads.api.model.Book
  * @author David Whitman on 11 Mar, 2017.
  */
 fun Book.mapToViewModel() = com.thunderclouddev.tirforgoodreads.model.Book(
+        this.id,
         this.isbn,
         this.isbn13,
         this.title,

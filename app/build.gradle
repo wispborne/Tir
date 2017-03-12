@@ -29,6 +29,13 @@ android {
             shrinkResources false
             signingConfig signingConfigs.debug
             applicationIdSuffix '.debug'
+            testCoverageEnabled false
+        }
+        ci {
+            minifyEnabled false
+            shrinkResources false
+            signingConfig signingConfigs.debug
+            applicationIdSuffix '.debug'
             testCoverageEnabled true
         }
         release {
@@ -40,10 +47,12 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
         test.java.srcDirs += 'src/test/kotlin'
     }
+    dataBinding.enabled = true
 }
 
 dependencies {
     def supportLibVersion = "25.2.0"
+    def requeryVersion = "1.2.0"
     // compile fileTree(dir: 'libs', include: ['*.jar'])
 
     // Data binding
@@ -74,6 +83,15 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     // Image loading
     compile 'com.github.bumptech.glide:glide:3.7.0'
+
+    // Database
+    compile "io.requery:requery:$requeryVersion"
+    compile "io.requery:requery-android:$requeryVersion" // for android
+    compile "io.requery:requery-kotlin:$requeryVersion"
+    kapt "io.requery:requery-processor:$requeryVersion"
+
+    // Backport Java 8 datetime package
+    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
 
     // Debug using chrome dev tools
     debugCompile 'com.facebook.stetho:stetho:1.4.1'

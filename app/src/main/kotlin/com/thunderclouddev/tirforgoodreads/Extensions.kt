@@ -30,6 +30,8 @@ fun String?.getOrNullIfBlank() = if (this.isNullOrBlank()) null else this
 
 fun CharSequence?.isNotNullOrBlank() = !this.isNullOrBlank()
 
+fun CharSequence?.getOrDefaultIfNullOrBlank(defaultValue: String) = if (this.isNullOrBlank()) this else defaultValue
+
 val Boolean.visibleOrGone: Int
     get() = if (this) View.VISIBLE else View.GONE
 

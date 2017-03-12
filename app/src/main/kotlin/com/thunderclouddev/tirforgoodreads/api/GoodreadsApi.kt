@@ -2,6 +2,7 @@ package com.thunderclouddev.tirforgoodreads.api
 
 import com.thunderclouddev.tirforgoodreads.api.model.BooksByAuthorResponse
 import io.reactivex.Observable
+import io.reactivex.Single
 import retrofit2.http.GET
 
 /**
@@ -11,5 +12,5 @@ import retrofit2.http.GET
  */
 interface GoodreadsApi {
     @GET("/author/list/18541?format=xml&key=KUtQGqdhmKy1nUyQnFZRzA")
-    fun getAuthorBooks(): Observable<BooksByAuthorResponse>
+    fun getAuthorBooks(): Single<BooksByAuthorResponse>
 }
