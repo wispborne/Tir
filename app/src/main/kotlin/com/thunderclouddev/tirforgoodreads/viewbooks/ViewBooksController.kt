@@ -1,18 +1,25 @@
 package com.thunderclouddev.tirforgoodreads.viewbooks
 
 import android.databinding.DataBindingUtil
+import android.net.Uri
 import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import com.bluelinelabs.conductor.Controller
+import com.github.scribejava.core.builder.ServiceBuilder
 import com.thunderclouddev.tirforgoodreads.BaseApp
 import com.thunderclouddev.tirforgoodreads.R
+import com.thunderclouddev.tirforgoodreads.auth.GoodreadsApi
 import com.thunderclouddev.tirforgoodreads.databinding.ViewBooksBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
+import org.fuckboilerplate.rx_social_connect.RxSocialConnect
+import org.fuckboilerplate.rx_social_connect.query_string.QueryString
+import org.fuckboilerplate.rx_social_connect.query_string.QueryStringStrategy
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -33,7 +40,38 @@ class ViewBooksController : Controller() {
 
         readFromDatabase(booksAdapter)
 
+        binding.signIn.setOnClickListener {
+            trySignIn()
+//            startActivity(Intent(activity!!, SignInActivity::class.java))
+        }
+
         return binding.root
+    }
+
+    private fun trySignIn() {
+        QueryString.PARSER.replaceStrategyOAuth1(object : QueryStringStrategy {
+            override fun extractCode(uri: Uri): String {
+                return uri.getQueryParameter("oauth_token")
+            }
+
+            override fun extractError(uri: Uri): String? {
+                return uri.getQueryParameter("error")
+            }
+
+        })
+        val goodReadsService = ServiceBuilder()
+                .apiKey("KUtQGqdhmKy1nUyQnFZRzA")
+                .apiSecret("qlhTxMwfzA7eOeCVKNiG9BeCjwuaf6xo7F2Jjqsfzeo")
+                .callback(GoodreadsApi.CALLBACK_URI)
+                .build(GoodreadsApi())
+
+        RxSocialConnect.with(activity, goodReadsService)
+                .subscribe({ response ->
+                    Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()
+                    TimberKt.d { response.token().token }
+                }, { error ->
+                    TimberKt.e(error, { "Couldn't get token!" })
+                })
     }
 
     fun refresh() {

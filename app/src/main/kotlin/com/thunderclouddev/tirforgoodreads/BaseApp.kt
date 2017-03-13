@@ -8,6 +8,10 @@ import com.thunderclouddev.tirforgoodreads.api.GoodreadsApiBuilder
 import com.thunderclouddev.tirforgoodreads.database.Data
 import com.thunderclouddev.tirforgoodreads.database.RequeryDatabase
 import com.thunderclouddev.tirforgoodreads.logging.timber.Timber
+import io.victoralbertos.jolyglot.GsonSpeaker
+import org.fuckboilerplate.rx_social_connect.RxSocialConnect
+
+
 
 /**
  * @author David Whitman on 11 Mar, 2017.
@@ -22,6 +26,8 @@ class BaseApp : Application() {
         AndroidThreeTen.init(this) // Java 8 DateTime lib backport init
         Stetho.initializeWithDefaults(this)
         LeakCanary.install(this)
+        RxSocialConnect.register(this, "GoodreadsKey")
+                .using(GsonSpeaker())
 
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
