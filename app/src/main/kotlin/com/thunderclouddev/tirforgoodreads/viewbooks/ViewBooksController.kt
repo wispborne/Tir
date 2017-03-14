@@ -14,8 +14,10 @@ import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.auth.GoodreadsApi
 import com.thunderclouddev.tirforgoodreads.databinding.ViewBooksBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
+import com.uber.autodispose.CompletableScoper
+import com.uber.autodispose.ObservableScoper
+import com.uber.autodispose.android.ViewScopeProvider
 import io.reactivex.android.schedulers.AndroidSchedulers
-import io.reactivex.disposables.CompositeDisposable
 import io.reactivex.schedulers.Schedulers
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
 import org.fuckboilerplate.rx_social_connect.query_string.QueryString
@@ -27,10 +29,17 @@ import org.fuckboilerplate.rx_social_connect.query_string.QueryStringStrategy
 class ViewBooksController : Controller() {
     private lateinit var binding: ViewBooksBinding
     private lateinit var booksAdapter: ViewBooksAdapter
-    private lateinit var disposables: CompositeDisposable
+
+    init {
+        addLifecycleListener(object : LifecycleListener() {
+            override fun postAttach(controller: Controller, view: View) {
+                super.postAttach(controller, view)
+                subscribeToDatabase(booksAdapter)
+            }
+        })
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
-        disposables = CompositeDisposable()
         binding = DataBindingUtil.inflate<ViewBooksBinding>(inflater, R.layout.view_books, container, false)
         binding.bookList.layoutManager = LinearLayoutManager(activity)
         binding.booksRefreshLayout.setOnRefreshListener { refresh() }
@@ -38,11 +47,8 @@ class ViewBooksController : Controller() {
         booksAdapter = ViewBooksAdapter(activity!!)
         binding.bookList.adapter = booksAdapter
 
-        readFromDatabase(booksAdapter)
-
         binding.signIn.setOnClickListener {
             trySignIn()
-//            startActivity(Intent(activity!!, SignInActivity::class.java))
         }
 
         return binding.root
@@ -75,30 +81,25 @@ class ViewBooksController : Controller() {
     }
 
     fun refresh() {
-        disposables.add(
-                fetchBooksByAuthor("18541")
-                        .doOnSubscribe { binding.booksRefreshLayout.isRefreshing = true }
-                        .doOnTerminate { binding.booksRefreshLayout.isRefreshing = false }
-                        .subscribe({}, { error ->
-
-                        }))
+        fetchBooksByAuthor("18541")
+                .doOnSubscribe { binding.booksRefreshLayout.isRefreshing = true }
+                .doOnTerminate { binding.booksRefreshLayout.isRefreshing = false }
+                .to(CompletableScoper(ViewScopeProvider.from(binding.root)))
+                .subscribe({}, { error ->
+                })
     }
 
-    override fun onDestroyView(view: View) {
-        disposables.dispose()
-        super.onDestroyView(view)
-    }
-
-    private fun readFromDatabase(booksAdapter: ViewBooksAdapter) {
-        disposables.add(BaseApp.data.createBooksByAuthorFromDatabaseObservable("18541")
+    private fun subscribeToDatabase(booksAdapter: ViewBooksAdapter) {
+        BaseApp.data.createBooksByAuthorFromDatabaseObservable("18541")
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
+                .to(ObservableScoper(ViewScopeProvider.from(binding.root)))
                 .subscribe({ book ->
                     TimberKt.v { "Reading book from db: $book" }
                     booksAdapter.edit().add(ViewBooksAdapter.BookViewModel(book)).commit()
                 }, { error ->
                     throw error
-                }))
+                })
     }
 
     private fun fetchBooksByAuthor(authorId: String) = BaseApp.data.queryBooksByAuthorFromApi(authorId)
