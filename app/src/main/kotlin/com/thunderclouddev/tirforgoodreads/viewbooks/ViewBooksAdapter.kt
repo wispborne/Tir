@@ -4,7 +4,7 @@ import android.content.Context
 import android.databinding.DataBindingUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.bumptech.glide.Glide
+import com.squareup.picasso.Picasso
 import com.thunderclouddev.tirforgoodreads.BaseRecyclerViewAdapter
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.SortedListAdapter
@@ -46,7 +46,7 @@ class ViewBooksAdapter(private val context: Context)
     data class ViewHolder(private val binding: BookItemBinding)
         : BaseRecyclerViewAdapter.ViewHolder<BookViewModel>(binding) {
         override fun performBind(item: BookViewModel) {
-            Glide.with(binding.root.context)
+            Picasso.with(binding.root.context)
                     .load(item.imageUrl)
                     .into(binding.bookCover)
 
