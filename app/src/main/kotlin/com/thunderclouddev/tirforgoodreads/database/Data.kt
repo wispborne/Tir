@@ -32,6 +32,8 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
             }
             .toCompletable()
 
+    fun queryFriendUpdates() = api.getFriendUpdates()
+
     private fun mapBookDatabaseToView(databaseBook: BookEntity) = Book(id = databaseBook.id,
             isbn = databaseBook.isbn,
             isbn13 = databaseBook.isbn13,
@@ -133,6 +135,7 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
             setAverageRating(author.averageRating)
             setRatingsCount(author.ratingsCount)
             setTextReviewsCount(author.textReviewsCount)
+            setDateTimeCached(ZonedDateTime.now().format(DateTimeFormatter.ISO_INSTANT))
         }
     }
 
@@ -160,8 +163,7 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
             setDescription(book.description)
             setPublished(book.published)
             book.authors.map { mapAuthorViewToDatabase(it) }.forEach { this.authors.add(it) }
-            setDateTimeCached(ZonedDateTime.now().format(DateTimeFormatter.ISO_INSTANT)
-            )
+            setDateTimeCached(ZonedDateTime.now().format(DateTimeFormatter.ISO_INSTANT))
         }, book.authors.map { mapAuthorViewToDatabase(it) })
     }
 }

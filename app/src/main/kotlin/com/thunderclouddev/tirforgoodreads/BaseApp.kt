@@ -2,6 +2,7 @@ package com.thunderclouddev.tirforgoodreads
 
 import android.app.Application
 import com.facebook.stetho.Stetho
+import com.github.scribejava.core.oauth.OAuth10aService
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.squareup.leakcanary.LeakCanary
 import com.thunderclouddev.tirforgoodreads.api.GoodreadsApiBuilder
@@ -12,13 +13,13 @@ import io.victoralbertos.jolyglot.GsonSpeaker
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
 
 
-
 /**
  * @author David Whitman on 11 Mar, 2017.
  */
 class BaseApp : Application() {
     companion object {
         lateinit var data: Data
+        lateinit var goodreadsService: OAuth10aService
     }
 
     override fun onCreate() {
@@ -33,8 +34,10 @@ class BaseApp : Application() {
             Timber.plant(Timber.DebugTree())
         }
 
-        val goodreadsApi = GoodreadsApiBuilder().goodreadsApi
+        val goodreadsApiBuilder = GoodreadsApiBuilder()
+        val goodreadsApi = goodreadsApiBuilder.goodreadsApi
         val database = RequeryDatabase(this)
         data = Data(goodreadsApi, database)
+        goodreadsService = goodreadsApiBuilder.goodreadsService
     }
 }

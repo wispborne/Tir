@@ -13,4 +13,7 @@ import retrofit2.http.Path
 interface GoodreadsApi {
     @GET("/author/list/{authorId}?format=xml&key=KUtQGqdhmKy1nUyQnFZRzA")
     fun getAuthorBooks(@Path("authorId") authorId: String): Single<BooksByAuthorResponse>
+
+    @GET("/updates/friends.xml")
+    fun getFriendUpdates(): Single<BooksByAuthorResponse>
 }

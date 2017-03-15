@@ -65,13 +65,8 @@ class ViewBooksController : Controller() {
             }
 
         })
-        val goodReadsService = ServiceBuilder()
-                .apiKey("KUtQGqdhmKy1nUyQnFZRzA")
-                .apiSecret("qlhTxMwfzA7eOeCVKNiG9BeCjwuaf6xo7F2Jjqsfzeo")
-                .callback(GoodreadsApi.CALLBACK_URI)
-                .build(GoodreadsApi())
 
-        RxSocialConnect.with(activity, goodReadsService)
+        RxSocialConnect.with(activity, BaseApp.goodreadsService)
                 .subscribe({ response ->
                     Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()
                     TimberKt.d { response.token().token }

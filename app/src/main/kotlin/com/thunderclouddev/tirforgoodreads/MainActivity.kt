@@ -11,6 +11,7 @@ import com.bluelinelabs.conductor.RouterTransaction
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.R.id
 import com.thunderclouddev.tirforgoodreads.R.layout
+import com.thunderclouddev.tirforgoodreads.ui.feed.FeedController
 import com.thunderclouddev.tirforgoodreads.viewbooks.ViewBooksController
 
 /**

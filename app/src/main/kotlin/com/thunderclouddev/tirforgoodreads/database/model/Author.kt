@@ -20,6 +20,7 @@ interface Author {
     val averageRating: Double
     val ratingsCount: Long
     val textReviewsCount: Long
+    val dateTimeCached: String
 
     @get:ManyToMany val books: MutableResult<Book>
 }
