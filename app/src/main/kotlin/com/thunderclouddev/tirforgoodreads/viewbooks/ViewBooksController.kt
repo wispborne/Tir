@@ -6,6 +6,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
 import android.widget.Toast
 import com.bluelinelabs.conductor.Controller
 import com.github.scribejava.core.builder.ServiceBuilder
@@ -34,7 +35,7 @@ class ViewBooksController : Controller() {
         addLifecycleListener(object : LifecycleListener() {
             override fun postAttach(controller: Controller, view: View) {
                 super.postAttach(controller, view)
-                subscribeToDatabase(booksAdapter)
+//                subscribeToDatabase(booksAdapter)
             }
         })
     }
@@ -50,6 +51,22 @@ class ViewBooksController : Controller() {
         binding.signIn.setOnClickListener {
             trySignIn()
         }
+
+        binding.animationView.playAnimation()
+        binding.sikhBar.setOnSeekBarChangeListener(object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                binding.animationView.progress = (progress.toFloat() / 100)
+            }
+
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {
+//                TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+            }
+
+        })
 
         return binding.root
     }

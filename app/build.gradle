@@ -90,6 +90,8 @@ dependencies {
     compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     // Image loading
     compile 'com.squareup.picasso:picasso:2.5.1'
+    // Animation
+    compile 'com.airbnb.android:lottie:1.5.3'
 
     // Database
     compile "io.requery:requery:$requeryVersion"
