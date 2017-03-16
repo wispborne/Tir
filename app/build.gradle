@@ -98,8 +98,9 @@ dependencies {
     kapt "io.requery:requery-processor:$requeryVersion"
 
     // OAuth
-//    compile 'com.github.VictorAlbertos.RxSocialConnect-Android:core:1.0.1-2.x'
-    compile 'com.github.VictorAlbertos.RxSocialConnect-Android:okhttp_interceptors:1.0.1-2.x'
+//    compile ('com.github.VictorAlbertos.RxSocialConnect-Android:okhttp_interceptors:1.0.1-2.x') {
+//        exclude module: 'RxSocialConnect'
+//    }
     compile 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
     // RxSC dependencies
     compile 'com.github.scribejava:scribejava-apis:3.2.0'

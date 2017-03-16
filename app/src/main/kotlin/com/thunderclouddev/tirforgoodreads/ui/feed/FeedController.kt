@@ -25,27 +25,20 @@ class FeedController : Controller() {
         addLifecycleListener(object : LifecycleListener() {
             override fun postAttach(controller: Controller, view: View) {
                 super.postAttach(controller, view)
-                BaseApp.data.queryFriendUpdates()
-                        .subscribeOn(Schedulers.io())
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribe({ author ->
-                            TimberKt.d { author.toString() }
-                        }, { error ->
-                            TimberKt.e(error, { error.toString() })
-                        })
+                getFeed()
             }
         })
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         val binding = DataBindingUtil.inflate<ViewBooksBinding>(inflater, R.layout.view_books, container, false)
-        binding.signIn.setOnClickListener {
-            trySignIn()
+        binding.getFeed.setOnClickListener {
+            getFeed()
         }
         return binding.root // for now
     }
 
-    private fun trySignIn() {
+    private fun getFeed() {
         QueryString.PARSER.replaceStrategyOAuth1(object : QueryStringStrategy {
             override fun extractCode(uri: Uri): String {
                 return uri.getQueryParameter("oauth_token")
@@ -58,11 +51,20 @@ class FeedController : Controller() {
         })
 
         RxSocialConnect.with(activity, BaseApp.goodreadsService)
-                .subscribe({ response ->
+                .singleOrError()
+                .doAfterSuccess { response ->
                     Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()
                     TimberKt.d { response.token().token }
+                }
+                .flatMap {
+                    BaseApp.data.queryFriendUpdates()
+                            .subscribeOn(Schedulers.io())
+                            .observeOn(AndroidSchedulers.mainThread())
+                }
+                .subscribe({ author ->
+                    TimberKt.d { author.toString() }
                 }, { error ->
-                    TimberKt.e(error, { "Couldn't get token!" })
+                    TimberKt.e(error, { error.toString() })
                 })
     }
 }

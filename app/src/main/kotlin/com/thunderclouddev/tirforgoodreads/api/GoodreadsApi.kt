@@ -1,6 +1,7 @@
 package com.thunderclouddev.tirforgoodreads.api
 
 import com.thunderclouddev.tirforgoodreads.api.model.BooksByAuthorResponse
+import com.thunderclouddev.tirforgoodreads.api.model.FriendUpdatesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -15,5 +16,5 @@ interface GoodreadsApi {
     fun getAuthorBooks(@Path("authorId") authorId: String): Single<BooksByAuthorResponse>
 
     @GET("/updates/friends.xml")
-    fun getFriendUpdates(): Single<BooksByAuthorResponse>
+    fun getFriendUpdates(): Single<FriendUpdatesResponse>
 }

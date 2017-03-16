@@ -20,7 +20,7 @@ import io.requery.sql.TableCreationMode
 class RequeryDatabase(context: Context) {
     private val data: KotlinReactiveEntityStore<Persistable> by lazy {
         // override onUpgrade to handle migrating to a new version
-        val source = DatabaseSource(context, Models.DEFAULT, 1)
+        val source = DatabaseSource(context, Models.DEFAULT, 2)
 
         if (BuildConfig.DEBUG) {
             // use this in development mode to drop and recreate the tables on every upgrade

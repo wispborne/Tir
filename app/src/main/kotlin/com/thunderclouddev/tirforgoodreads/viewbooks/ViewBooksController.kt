@@ -8,10 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.bluelinelabs.conductor.Controller
-import com.github.scribejava.core.builder.ServiceBuilder
 import com.thunderclouddev.tirforgoodreads.BaseApp
 import com.thunderclouddev.tirforgoodreads.R
-import com.thunderclouddev.tirforgoodreads.auth.GoodreadsApi
 import com.thunderclouddev.tirforgoodreads.databinding.ViewBooksBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
 import com.uber.autodispose.CompletableScoper
@@ -47,7 +45,7 @@ class ViewBooksController : Controller() {
         booksAdapter = ViewBooksAdapter(activity!!)
         binding.bookList.adapter = booksAdapter
 
-        binding.signIn.setOnClickListener {
+        binding.getFeed.setOnClickListener {
             trySignIn()
         }
 

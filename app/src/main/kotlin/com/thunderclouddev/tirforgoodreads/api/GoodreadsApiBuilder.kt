@@ -3,7 +3,6 @@ package com.thunderclouddev.tirforgoodreads.api
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.github.scribejava.core.builder.ServiceBuilder
 import com.thunderclouddev.tirforgoodreads.BuildConfig
-import io.victoralbertos.rx_social_connect.OAuth1Interceptor
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory

@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity(), ActionBarProvider {
         router = Conductor.attachRouter(this, findViewById(id.controller_container) as ViewGroup,
             savedInstanceState)
         if (!router!!.hasRootController()) {
-            router!!.setRoot(RouterTransaction.with(ViewBooksController()))
+            router!!.setRoot(RouterTransaction.with(FeedController()))
         }
     }
 

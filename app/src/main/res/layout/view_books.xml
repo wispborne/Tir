@@ -10,10 +10,10 @@
         android:orientation="vertical">
 
         <Button
-            android:id="@+id/signIn"
+            android:id="@+id/getFeed"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign in"/>
+            android:text="Get Feed"/>
 
         <android.support.v4.widget.SwipeRefreshLayout
             android:id="@+id/books_refreshLayout"

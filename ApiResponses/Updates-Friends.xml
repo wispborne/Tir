@@ -1,0 +1,1557 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GoodreadsResponse>
+    <Request>
+        <authentication>true</authentication>
+        <key>
+            <![CDATA[KUtQGqdhmKy1nUyQnFZRzA]]>
+        </key>
+        <method>
+            <![CDATA[home_friend_updates]]>
+        </method>
+    </Request>
+    <updates type="array">
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1942760164">The Art of Happiness</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1756906939</link>
+            <image_url>https://images.gr-assets.com/users/1459888724p2/53466340.jpg</image_url>
+            <actor>
+                <id type="integer">53466340</id>
+                <name>Lucas</name>
+                <image_url>https://images.gr-assets.com/users/1459888724p2/53466340.jpg</image_url>
+                <link>https://www.goodreads.com/user/show/53466340-lucas</link>
+            </actor>
+            <updated_at>Wed, 15 Mar 2017 13:51:36 -0700</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1756906939</id>
+                    <review_id type="integer">1942760164</review_id>
+                    <user_id type="integer">53466340</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-15T20:51:36+00:00</updated_at>
+                    <review>
+                        <id type="integer">1942760164</id>
+                        <user_id type="integer">53466340</user_id>
+                        <book_id type="integer">38210</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-15T20:51:35+00:00</updated_at>
+                        <created_at type="datetime">2017-03-15T20:51:35+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">1651617</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-15T20:51:35+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">38210</id>
+                            <work_id type="integer">1651617</work_id>
+                            <isbn>1573221112</isbn>
+                            <isbn13>9781573221115</isbn13>
+                            <title>The Art of Happiness</title>
+                            <sort_by_title>art of happiness, the</sort_by_title>
+                            <author_id type="integer">570218</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description>Nearly every time you see him, he's laughing, or at least smiling. And he makes everyone else around him feel like smiling. He's the Dalai Lama, the spiritual and temporal leader of Tibet, a Nobel Prize winner, and an increasingly popular speaker and statesman. What's more, he'll tell you that happiness is the purpose of life, and that "the very motion of our life is towards happiness." How to get there has always been the question. He's tried to answer it before, but he's never had the help of a psychiatrist to get the message across in a context we can easily understand. Through conversations, stories, and meditations, the Dalai Lama shows us how to defeat day-to-day anxiety, insecurity, anger, and discouragement. Together with Dr. Cutler, he explores many facets of everyday life, including relationships, loss, and the pursuit of wealth, to illustrate how to ride through life's obstacles on a deep and abiding source of inner peace.</description>
+                            <format>Hardcover</format>
+                            <publication_year type="integer">1998</publication_year>
+                            <publication_month type="integer">10</publication_month>
+                            <publication_day type="integer">26</publication_day>
+                            <num_pages type="integer">336</num_pages>
+                            <publisher>Riverhead Hardcover</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url>http://www.theartofhappiness.com/</url>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2011-06-28T18:57:14+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-05-16T14:54:34+00:00</s3_image_at>
+                            <reviews_count type="integer">142597</reviews_count>
+                            <ratings_sum type="integer">238865</ratings_sum>
+                            <ratings_count type="integer">57740</ratings_count>
+                            <text_reviews_count type="integer">1573</text_reviews_count>
+                            <book_authors_count type="integer">1</book_authors_count>
+                            <updated_at type="datetime">2015-05-16T14:54:34+00:00</updated_at>
+                            <created_at type="datetime">2007-01-17T22:35:26+00:00</created_at>
+                            <author_id_updater_user_id type="integer">310857</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">1072178</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">-51</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-44</format_updater_user_id>
+                            <image_updater_user_id type="integer">-40</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-44</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-44</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">1750565</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-44</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-44</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-44</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">-44</title_updater_user_id>
+                            <url_updater_user_id type="integer">386411</url_updater_user_id>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">570218</id>
+                                <name>Dalai Lama XIV</name>
+                                <updated_at type="datetime">2017-03-16T14:59:16+00:00</updated_at>
+                                <created_at type="datetime">2007-06-11T16:31:05+00:00</created_at>
+                                <searched_for_at type="datetime">2007-09-25T17:57:30+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2009-05-10T21:03:06+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender>M</gender>
+                                <country_code></country_code>
+                                <born_at type="date">1935-07-06</born_at>
+                                <died_at type="datetime" nil="true"/>
+                                <about>Jetsun Jamphel Ngawang Lobsang Yeshe Tenzin Gyatso (born Lhamo Döndrub), the 14th Dalai Lama, is a practicing member of the Gelug School of Tibetan Buddhism and is influential as a Nobel Peace Prize laureate, the world's most famous Buddhist monk, and the leader of the exiled Tibetan government in India.
+
+Tenzin Gyatso was the fifth of sixteen children born to a farming family. He was proclaimed the tulku (an Enlightened lama who has consciously decided to take rebirth) of the 13th Dalai Lama at the age of two.
+
+On 17 November 1950, at the age of 15, he was enthroned as Tibet's ruler. Thus he became Tibet's most important political ruler just one month after the People's Republic of China's invasion of Tibet on 7 October 1950. In 1954, he went to Beijing to attempt peace talks with Mao Zedong and other leaders of the PRC. These talks ultimately failed.
+
+After a failed uprising and the collapse of the Tibetan resistance movement in 1959, the Dalai Lama left for India, where he was active in establishing the Central Tibetan Administration (the Tibetan Government in Exile) and in seeking to preserve Tibetan culture and education among the thousands of refugees who accompanied him.
+
+Tenzin Gyatso is a charismatic figure and noted public speaker. This Dalai Lama is the first to travel to the West. There, he has helped to spread Buddhism and to promote the concepts of universal responsibility, secular ethics, and religious harmony.
+
+He was awarded the Nobel Peace Prize in 1989, honorary Canadian citizenship in 2006, and the United States Congressional Gold Medal on 17 October 2007.
+</about>
+                                <uploader_user_id type="integer">431619</uploader_user_id>
+                                <image_copyright>http://www.speakwell.com/well/2000_summer/features/visions_of_wellness.html</image_copyright>
+                                <influences></influences>
+                                <url>http://www.dalailama.com/</url>
+                                <genre1>Philosophy</genre1>
+                                <genre2>Nonfiction</genre2>
+                                <genre3>Buddhism</genre3>
+                                <books_count type="integer">1440</books_count>
+                                <reviews_count type="integer">413913</reviews_count>
+                                <ratings_sum type="integer">663960</ratings_sum>
+                                <works_count type="integer">534</works_count>
+                                <hometown>Takster, Tibet</hometown>
+                                <rating_dist>5:5976|4:5896|3:3395|2:670|1:135|total:16072</rating_dist>
+                                <s3_image_at type="datetime">2015-05-15T00:04:36+00:00</s3_image_at>
+                                <ratings_count type="integer">159256</ratings_count>
+                                <text_reviews_count type="integer">7811</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">1787</fanships_count>
+                                <best_book_id type="integer">38210</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>dalai lama 14</sort_by_name>
+                                <shelf_display_name>Dalai Lama XIV</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[is currently reading <a only_path="false" href="https://www.goodreads.com/review/show/1942292909">The Sojourn</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1756209178</link>
+            <image_url>https://images.gr-assets.com/users/1459888724p2/53466340.jpg</image_url>
+            <actor>
+                <id type="integer">53466340</id>
+                <name>Lucas</name>
+                <image_url>https://images.gr-assets.com/users/1459888724p2/53466340.jpg</image_url>
+                <link>https://www.goodreads.com/user/show/53466340-lucas</link>
+            </actor>
+            <updated_at>Wed, 15 Mar 2017 01:35:52 -0700</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1756209178</id>
+                    <review_id type="integer">1942292909</review_id>
+                    <user_id type="integer">53466340</user_id>
+                    <old_status nil="true"/>
+                    <status>currently-reading</status>
+                    <updated_at type="datetime">2017-03-15T08:35:52+00:00</updated_at>
+                    <review>
+                        <id type="integer">1942292909</id>
+                        <user_id type="integer">53466340</user_id>
+                        <book_id type="integer">9501104</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>currently-reading</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-15T08:35:52+00:00</updated_at>
+                        <created_at type="datetime">2017-03-15T08:35:51+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">14386678</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime">2017-03-15T08:35:52+00:00</started_at>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-15T08:35:52+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">9501104</id>
+                            <work_id type="integer">14386678</work_id>
+                            <isbn>1934137340</isbn>
+                            <isbn13>9781934137345</isbn13>
+                            <title>The Sojourn</title>
+                            <sort_by_title>sojourn, the</sort_by_title>
+                            <author_id type="integer">509654</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description><i>The Sojourn</i> is the story of Jozef Vinich, who was uprooted from a 19th-century mining town in Colorado by a family tragedy and returns with his father to an impoverished shepherd’s life in rural Austria-Hungary. When World War One comes, Jozef joins his adopted brother as a sharpshooter in the Kaiser’s army, surviving a perilous trek across the frozen Italian Alps and capture by a victorious enemy.
+
+A stirring tale of brotherhood, coming-of-age, and survival, that was inspired by the author’s own family history, this novel evokes a time when Czechs, Slovaks, Austrians, and Germans fought on the same side while divided by language, ethnicity, and social class in the most brutal war to date. It is also a poignant tale of fathers and sons, addressing the great immigration to America and the desire to live the American dream amidst the unfolding tragedy in Europe.</description>
+                            <format>Paperback</format>
+                            <publication_year type="integer">2011</publication_year>
+                            <publication_month type="integer">4</publication_month>
+                            <publication_day type="integer">19</publication_day>
+                            <num_pages type="integer">192</num_pages>
+                            <publisher>Bellevue Literary Press</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2012-08-11T06:29:45+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-06-16T00:11:38+00:00</s3_image_at>
+                            <reviews_count type="integer">5829</reviews_count>
+                            <ratings_sum type="integer">6592</ratings_sum>
+                            <ratings_count type="integer">1755</ratings_count>
+                            <text_reviews_count type="integer">327</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2015-06-16T00:11:38+00:00</updated_at>
+                            <created_at type="datetime">2010-10-12T21:03:20+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-44</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">3569723</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">5115130</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-44</format_updater_user_id>
+                            <image_updater_user_id type="integer">-44</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-44</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-44</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">-110</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-44</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-44</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-44</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">-44</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">509654</id>
+                                <name>Andrew Krivak</name>
+                                <updated_at type="datetime">2017-03-05T12:53:04+00:00</updated_at>
+                                <created_at type="datetime">2007-05-27T13:28:46+00:00</created_at>
+                                <searched_for_at type="datetime">2008-03-19T02:46:19+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2011-05-22T15:13:46+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender nil="true"/>
+                                <country_code></country_code>
+                                <born_at type="datetime" nil="true"/>
+                                <died_at type="datetime" nil="true"/>
+                                <about>Andrew Krivak is the author of The Sojourn, a novel set during WWI; A Long Retreat: In Search of a Religious Life, a memoir about his eight years in the Jesuit Order; and the editor of The Letters of William Carlos Williams to Edgar Irving Williams, 1902-1912. The grandson of Slovak immigrants, he grew up in Pennsylvania, has lived in London, and has taught at Harvard, Boston College, and the College of the Holy Cross. Krivak currently lives with his wife and three children in Massachusetts. "</about>
+                                <uploader_user_id type="integer">886144</uploader_user_id>
+                                <image_copyright>http://www.portsmouthnh.com/calendar/images/AndrewKrivak.jpg</image_copyright>
+                                <influences></influences>
+                                <url></url>
+                                <genre1></genre1>
+                                <genre2></genre2>
+                                <genre3></genre3>
+                                <books_count type="integer">18</books_count>
+                                <reviews_count type="integer">8098</reviews_count>
+                                <ratings_sum type="integer">8097</ratings_sum>
+                                <works_count type="integer">7</works_count>
+                                <hometown></hometown>
+                                <rating_dist>5:10|4:12|3:9|2:3|total:34</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T23:57:21+00:00</s3_image_at>
+                                <ratings_count type="integer">2137</ratings_count>
+                                <text_reviews_count type="integer">423</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">7</fanships_count>
+                                <best_book_id type="integer">9501104</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>krivak, andrew</sort_by_name>
+                                <shelf_display_name>Krivak, Andrew</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="friend">
+            <action_text>
+                <![CDATA[is now friends with Oana Suciu]]>
+            </action_text>
+            <link>https://www.goodreads.com/user/show/65937783-oana-suciu</link>
+            <image_url>https://images.gr-assets.com/users/1489510328p2/65937783.jpg</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Tue, 14 Mar 2017 09:52:31 -0700</updated_at>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1940338054">Cavalcare la propria tigre</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1753264295</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Mon, 13 Mar 2017 04:34:40 -0700</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1753264295</id>
+                    <review_id type="integer">1940338054</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-13T11:34:40+00:00</updated_at>
+                    <review>
+                        <id type="integer">1940338054</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">9707980</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-13T11:34:40+00:00</updated_at>
+                        <created_at type="datetime">2017-03-13T11:34:39+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">14596228</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-13T11:34:40+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">9707980</id>
+                            <work_id type="integer">14596228</work_id>
+                            <isbn>8879286390</isbn>
+                            <isbn13>9788879286398</isbn13>
+                            <title>Cavalcare la propria tigre</title>
+                            <sort_by_title>cavalcare la propria tigre</sort_by_title>
+                            <author_id type="integer">233803</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description>L’arte dello stratagemma è un’arte antica, non solo perché è alla base di secolari tradizioni di saggezza, ma soprattutto perché appartiene agli esseri viventi: basta osservare animali e piante per registrare strategie di sopravvivenza, di difesa o di attacco. L’uomo ha semplicemente migliorato quello che da un’eternità la natura gli pone sotto gli occhi. L’intelligenza e la creatività applicate al coordinamento dei mezzi necessari per raggiungere uno scopo fanno parte di quella saggezza che da sempre guida – o dovrebbe guidare – gli esseri umani. Questa saggezza, però, va coltivata; le abilità vanno esercitate; le conoscenze approfondite. 
+In questo libro Giorgio Nardone racconta e analizza queste abilità attraverso le tre tradizioni fondamentali che utilizzano gli stratagemmi come strumenti essenziali per la realizzazione dei fini: quella greca dell’astuzia, l’arte cinese della guerra e quella retorica della persuasione. Per superare gli ostacoli e sciogliere inestricabili garbugli con orientale eleganza e, perché no, un pizzico di leggerezza.</description>
+                            <format>Paperback</format>
+                            <publication_year type="integer">2003</publication_year>
+                            <publication_month type="integer">5</publication_month>
+                            <publication_day type="integer">23</publication_day>
+                            <num_pages type="integer">112</num_pages>
+                            <publisher>Ponte alle Grazie</publisher>
+                            <language_code>ita</language_code>
+                            <edition_information>Saggi di terapia breve </edition_information>
+                            <url>http://www.ponteallegrazie.it/scheda.asp?editore=Ponte%20alle%20Grazie&idlibro=3932&titolo=CAVALCARE+LA+PROPRIA+TIGRE</url>
+                            <source_url>http://www.ponteallegrazie.it/scheda.asp?editore=Ponte%20alle%20Grazie&idlibro=3932</source_url>
+                            <image_uploaded_at type="datetime">2012-01-24T22:17:54+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-06-16T00:18:53+00:00</s3_image_at>
+                            <reviews_count type="integer">64</reviews_count>
+                            <ratings_sum type="integer">105</ratings_sum>
+                            <ratings_count type="integer">32</ratings_count>
+                            <text_reviews_count type="integer">1</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2015-06-16T00:18:53+00:00</updated_at>
+                            <created_at type="datetime">2010-11-15T22:26:51+00:00</created_at>
+                            <author_id_updater_user_id type="integer">4102117</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer" nil="true"/>
+                            <description_updater_user_id type="integer">10382635</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer">10382635</edition_information_updater_user_id>
+                            <format_updater_user_id type="integer">4102117</format_updater_user_id>
+                            <image_updater_user_id type="integer">4102117</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">4102117</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">4102117</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">10382635</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">4102117</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">4102117</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">4102117</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">4102117</title_updater_user_id>
+                            <url_updater_user_id type="integer">10382635</url_updater_user_id>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">233803</id>
+                                <name>Giorgio Nardone</name>
+                                <updated_at type="datetime">2017-03-13T06:06:51+00:00</updated_at>
+                                <created_at type="datetime">2007-03-22T00:18:21+00:00</created_at>
+                                <searched_for_at type="datetime">2008-08-19T09:42:33+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2013-09-09T19:01:19+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender>M</gender>
+                                <country_code>IT</country_code>
+                                <born_at type="datetime" nil="true"/>
+                                <died_at type="datetime" nil="true"/>
+                                <about></about>
+                                <uploader_user_id type="integer">10125344</uploader_user_id>
+                                <image_copyright>http://www.materiaprimaedicoes.com/portfolio-post/giorgio-nardone</image_copyright>
+                                <influences></influences>
+                                <url></url>
+                                <genre1></genre1>
+                                <genre2></genre2>
+                                <genre3></genre3>
+                                <books_count type="integer">149</books_count>
+                                <reviews_count type="integer">834</reviews_count>
+                                <ratings_sum type="integer">1190</ratings_sum>
+                                <works_count type="integer">65</works_count>
+                                <hometown></hometown>
+                                <rating_dist>5:1|4:5|3:3|2:2|1:0|total:11</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T23:30:18+00:00</s3_image_at>
+                                <ratings_count type="integer">325</ratings_count>
+                                <text_reviews_count type="integer">35</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">0</fanships_count>
+                                <best_book_id type="integer">9707980</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>nardone, giorgio</sort_by_name>
+                                <shelf_display_name>Nardone, Giorgio</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1940337124">The Price of Privilege: How Parental Pressure and Material Advantage Are Creating a Generation of Disconnected and Unhappy Kids</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1753262864</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Mon, 13 Mar 2017 04:32:26 -0700</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1753262864</id>
+                    <review_id type="integer">1940337124</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-13T11:32:26+00:00</updated_at>
+                    <review>
+                        <id type="integer">1940337124</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">221424</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-13T11:32:26+00:00</updated_at>
+                        <created_at type="datetime">2017-03-13T11:32:26+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">214416</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-13T11:32:26+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">221424</id>
+                            <work_id type="integer">214416</work_id>
+                            <isbn>0060595841</isbn>
+                            <isbn13>9780060595845</isbn13>
+                            <title>The Price of Privilege: How Parental Pressure and Material Advantage Are Creating a Generation of Disconnected and Unhappy Kids</title>
+                            <sort_by_title>price of privilege: how parental pressure and material advantage are creating a generation of disconnected and unhappy kids, the</sort_by_title>
+                            <author_id type="integer">129539</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description>this book looks at controversial privilege families</description>
+                            <format>Hardcover</format>
+                            <publication_year type="integer">2006</publication_year>
+                            <publication_month type="integer">7</publication_month>
+                            <publication_day type="integer">3</publication_day>
+                            <num_pages type="integer">256</num_pages>
+                            <publisher>Harper</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2015-03-16T06:44:23+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-05-16T15:22:25+00:00</s3_image_at>
+                            <reviews_count type="integer">4238</reviews_count>
+                            <ratings_sum type="integer">5720</ratings_sum>
+                            <ratings_count type="integer">1500</ratings_count>
+                            <text_reviews_count type="integer">244</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2017-01-04T06:37:15+00:00</updated_at>
+                            <created_at type="datetime">2007-03-02T09:39:06+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-9</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">-9</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">-9</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-9</format_updater_user_id>
+                            <image_updater_user_id type="integer">-9</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-9</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-9</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">-9</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-9</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-9</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-9</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">-9</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">129539</id>
+                                <name>Madeline Levine</name>
+                                <updated_at type="datetime">2016-12-06T02:36:25+00:00</updated_at>
+                                <created_at type="datetime">2007-03-02T09:39:06+00:00</created_at>
+                                <searched_for_at type="datetime">2007-04-23T08:33:58+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime" nil="true"/>
+                                <user_id type="integer" nil="true"/>
+                                <gender>F</gender>
+                                <country_code></country_code>
+                                <born_at type="datetime" nil="true"/>
+                                <died_at type="datetime" nil="true"/>
+                                <about></about>
+                                <uploader_user_id type="integer">4736859</uploader_user_id>
+                                <image_copyright></image_copyright>
+                                <influences></influences>
+                                <url></url>
+                                <genre1></genre1>
+                                <genre2></genre2>
+                                <genre3></genre3>
+                                <books_count type="integer">28</books_count>
+                                <reviews_count type="integer">7850</reviews_count>
+                                <ratings_sum type="integer">10392</ratings_sum>
+                                <works_count type="integer">5</works_count>
+                                <hometown></hometown>
+                                <rating_dist>5:65|4:167|3:123|2:29|1:4|total:388</rating_dist>
+                                <s3_image_at type="datetime" nil="true"/>
+                                <ratings_count type="integer">2702</ratings_count>
+                                <text_reviews_count type="integer">407</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">1</fanships_count>
+                                <best_book_id type="integer">221424</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>levine, madeline</sort_by_name>
+                                <shelf_display_name>Levine, Madeline</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1935560789">The Element: How Finding Your Passion Changes Everything</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1746065990</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Wed, 08 Mar 2017 07:03:30 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1746065990</id>
+                    <review_id type="integer">1935560789</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-08T15:03:30+00:00</updated_at>
+                    <review>
+                        <id type="integer">1935560789</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">4224060</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-08T15:03:30+00:00</updated_at>
+                        <created_at type="datetime">2017-03-08T15:03:29+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">4271462</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-08T15:03:30+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">4224060</id>
+                            <work_id type="integer">4271462</work_id>
+                            <isbn>0670020478</isbn>
+                            <isbn13>9780670020478</isbn13>
+                            <title>The Element: How Finding Your Passion Changes Everything</title>
+                            <sort_by_title>element: how finding your passion changes everything, the</sort_by_title>
+                            <author_id type="integer">43940</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description><b>From one of the world's leading thinkers and speakers on creativity and self-fulfillment, a breakthrough book about talent, passion, and achievement</b><br><br>The element is the point at which natural talent meets personal passion. When people arrive at the element, they feel most themselves and most inspired and achieve at their highest levels. <i>The Element</i> draws on the stories of a wide range of people, from ex-Beatle Paul McCartney to Matt Groening, creator of <i>The Simpsons</i>; from Meg Ryan to Gillian Lynne, who choreographed the Broadway productions of <i>Cats</i> and <i>The Phantom of the Opera</i>; and from writer Arianna Huffington to renowned physicist Richard Feynman and others, including business leaders and athletes. It explores the components of this new paradigm: The diversity of intelligence, the power of imagination and creativity, and the importance of commitment to our own capabilities.<br><br> With a wry sense of humor, Ken Robinson looks at the conditions that enable us to find ourselves in the element and those that stifle that possibility. He shows that age and occupation are no barrier, and that once we have found our path we can help others to do so as well. <i>The Element</i> shows the vital need to enhance creativity and innovation by thinking differently about human resources and imagination. It is also an essential strategy for transforming education, business, and communities to meet the challenges of living and succeeding in the twenty-first century.</description>
+                            <format>Hardcover</format>
+                            <publication_year type="integer">2009</publication_year>
+                            <publication_month type="integer">1</publication_month>
+                            <publication_day type="integer">8</publication_day>
+                            <num_pages type="integer">288</num_pages>
+                            <publisher>Viking</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2012-09-11T08:17:50+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-06-15T22:12:57+00:00</s3_image_at>
+                            <reviews_count type="integer">24528</reviews_count>
+                            <ratings_sum type="integer">33789</ratings_sum>
+                            <ratings_count type="integer">8712</ratings_count>
+                            <text_reviews_count type="integer">922</text_reviews_count>
+                            <book_authors_count type="integer">1</book_authors_count>
+                            <updated_at type="datetime">2016-03-28T18:46:51+00:00</updated_at>
+                            <created_at type="datetime">2008-08-17T04:29:31+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-50</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">614857</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">-50</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-50</format_updater_user_id>
+                            <image_updater_user_id type="integer">-110</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-50</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-50</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">28787323</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-50</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-50</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-50</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">4562837</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">43940</id>
+                                <name>Ken Robinson</name>
+                                <updated_at type="datetime">2017-03-15T13:47:33+00:00</updated_at>
+                                <created_at type="datetime">2007-02-08T02:03:39+00:00</created_at>
+                                <searched_for_at type="datetime">2007-06-09T11:56:08+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2010-03-22T08:27:04+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender>M</gender>
+                                <country_code>GB</country_code>
+                                <born_at type="date">1950-03-04</born_at>
+                                <died_at type="datetime" nil="true"/>
+                                <about>Sir Ken Robinson (born Liverpool 4 March 1950) is an internationally recognized leader in the development of innovation and human resources. He has worked with national governments in Europe and Asia, with international agencies, Fortune 500 companies, national and state education systems, non-profit corporations and some of the world’s leading cultural organizations. They include the Royal Shakespeare Company, Sir Paul McCartney’s Liverpool Institute for Performing Arts, the Royal Ballet, the Hong Kong Academy for Performing Arts, the European Commission, UNESCO, the Council of Europe, the J Paul Getty Trust and the Education Commission of the States. From 1989 - 2001, he was Professor of Arts Education at the University of Warwick.</about>
+                                <uploader_user_id type="integer">1627554</uploader_user_id>
+                                <image_copyright>http://redjotter.files.wordpress.com/2009/02/sir-ken-robinson-0011.jpg</image_copyright>
+                                <influences></influences>
+                                <url>http://www.sirkenrobinson.com/</url>
+                                <genre1>Non-fiction</genre1>
+                                <genre2>Psychology</genre2>
+                                <genre3>Self help</genre3>
+                                <books_count type="integer">178</books_count>
+                                <reviews_count type="integer">50693</reviews_count>
+                                <ratings_sum type="integer">64265</ratings_sum>
+                                <works_count type="integer">26</works_count>
+                                <hometown>Liverpool</hometown>
+                                <rating_dist>5:193|4:300|3:226|2:86|1:12|total:817</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T23:08:32+00:00</s3_image_at>
+                                <ratings_count type="integer">16449</ratings_count>
+                                <text_reviews_count type="integer">1792</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">491</fanships_count>
+                                <best_book_id type="integer">4224060</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>robinson, ken</sort_by_name>
+                                <shelf_display_name>Robinson, Ken</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="review">
+            <action_text>
+                <![CDATA[gave 5 stars to <a href="https://www.goodreads.com/book/show/13369538-missing-out">Missing Out: In Praise of the Unlived Life (Hardcover)</a> by<a href="https://www.goodreads.com/author/show/33751.Adam_Phillips">Adam Phillips</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/review/show/1627165477</link>
+            <image_url>https://images.gr-assets.com/books/1340711365s/13369538.jpg</image_url>
+            <actor>
+                <id type="integer">6007102</id>
+                <name>Nora</name>
+                <image_url>https://images.gr-assets.com/users/1313087529p2/6007102.jpg</image_url>
+                <link>https://www.goodreads.com/user/show/6007102-nora</link>
+            </actor>
+            <updated_at>Tue, 07 Mar 2017 23:42:44 -0800</updated_at>
+            <action type="rating">
+                <rating>5</rating>
+            </action>
+            <object>
+                <book>
+                    <id>13369538</id>
+                    <title>
+                        <![CDATA[Missing Out: In Praise of the Unlived Life]]>
+                    </title>
+                    <link>https://www.goodreads.com/book/show/13369538-missing-out</link>
+                    <authors>
+                        <author>
+                            <id>33751</id>
+                            <name>Adam Phillips</name>
+                            <role></role>
+                            <image_url nophoto='false'>
+                                <![CDATA[https://images.gr-assets.com/authors/1363466197p5/33751.jpg]]>
+                            </image_url>
+                            <small_image_url nophoto='false'>
+                                <![CDATA[https://images.gr-assets.com/authors/1363466197p2/33751.jpg]]>
+                            </small_image_url>
+                            <link>
+                                <![CDATA[https://www.goodreads.com/author/show/33751.Adam_Phillips]]>
+                            </link>
+                            <average_rating>3.79</average_rating>
+                            <ratings_count>6015</ratings_count>
+                            <text_reviews_count>512</text_reviews_count>
+                        </author>
+                    </authors>
+                </book>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1934615036">Soulcraft: Crossing into the Mysteries of Nature and Psyche</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1744658716</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Tue, 07 Mar 2017 08:29:12 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1744658716</id>
+                    <review_id type="integer">1934615036</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-07T16:29:12+00:00</updated_at>
+                    <review>
+                        <id type="integer">1934615036</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">645698</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-07T16:29:12+00:00</updated_at>
+                        <created_at type="datetime">2017-03-07T16:29:11+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">631857</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-07T16:29:12+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">645698</id>
+                            <work_id type="integer">631857</work_id>
+                            <isbn>1577314220</isbn>
+                            <isbn13>9781577314226</isbn13>
+                            <title>Soulcraft: Crossing into the Mysteries of Nature and Psyche</title>
+                            <sort_by_title>soulcraft: crossing into the mysteries of nature and psyche</sort_by_title>
+                            <author_id type="integer">347616</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description nil="true"/>
+                            <format>Paperback</format>
+                            <publication_year type="integer">2003</publication_year>
+                            <publication_month type="integer">8</publication_month>
+                            <publication_day type="integer">29</publication_day>
+                            <num_pages type="integer">320</num_pages>
+                            <publisher>New World Library</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2012-02-09T00:40:06+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-05-16T16:20:07+00:00</s3_image_at>
+                            <reviews_count type="integer">1356</reviews_count>
+                            <ratings_sum type="integer">2057</ratings_sum>
+                            <ratings_count type="integer">481</ratings_count>
+                            <text_reviews_count type="integer">34</text_reviews_count>
+                            <book_authors_count type="integer">1</book_authors_count>
+                            <updated_at type="datetime">2015-05-16T16:20:07+00:00</updated_at>
+                            <created_at type="datetime">2007-04-16T03:10:59+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-44</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer" nil="true"/>
+                            <description_updater_user_id type="integer">3625145</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-44</format_updater_user_id>
+                            <image_updater_user_id type="integer">-44</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-44</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-44</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">-110</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-44</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-44</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-44</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">-44</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">347616</id>
+                                <name>Bill Plotkin</name>
+                                <updated_at type="datetime">2017-01-23T12:35:17+00:00</updated_at>
+                                <created_at type="datetime">2007-04-16T03:10:59+00:00</created_at>
+                                <searched_for_at type="datetime">2007-06-30T07:45:00+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2015-04-15T20:22:34+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender nil="true"/>
+                                <country_code></country_code>
+                                <born_at type="datetime" nil="true"/>
+                                <died_at type="datetime" nil="true"/>
+                                <about></about>
+                                <uploader_user_id type="integer">39230033</uploader_user_id>
+                                <image_copyright>This photo is public domain.</image_copyright>
+                                <influences></influences>
+                                <url></url>
+                                <genre1></genre1>
+                                <genre2></genre2>
+                                <genre3></genre3>
+                                <books_count type="integer">11</books_count>
+                                <reviews_count type="integer">4875</reviews_count>
+                                <ratings_sum type="integer">5241</ratings_sum>
+                                <works_count type="integer">6</works_count>
+                                <hometown></hometown>
+                                <rating_dist>5:69|4:43|3:27|2:2|1:2|total:143</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T23:38:35+00:00</s3_image_at>
+                                <ratings_count type="integer">1231</ratings_count>
+                                <text_reviews_count type="integer">113</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">9</fanships_count>
+                                <best_book_id type="integer">645698</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>plotkin, bill</sort_by_name>
+                                <shelf_display_name>Plotkin, Bill</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1933877167">Beyond Words: What Animals Think and Feel</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1743537097</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Mon, 06 Mar 2017 13:44:00 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1743537097</id>
+                    <review_id type="integer">1933877167</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-03-06T21:44:00+00:00</updated_at>
+                    <review>
+                        <id type="integer">1933877167</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">22320456</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-03-06T21:44:00+00:00</updated_at>
+                        <created_at type="datetime">2017-03-06T21:43:59+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">41714030</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-03-06T21:44:00+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">22320456</id>
+                            <work_id type="integer">41714030</work_id>
+                            <isbn>0805098887</isbn>
+                            <isbn13>9780805098884</isbn13>
+                            <title>Beyond Words: What Animals Think and Feel</title>
+                            <sort_by_title>beyond words: what animals think and feel</sort_by_title>
+                            <author_id type="integer">22933</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description nil="true"/>
+                            <format>Hardcover</format>
+                            <publication_year type="integer">2015</publication_year>
+                            <publication_month type="integer">7</publication_month>
+                            <publication_day type="integer">14</publication_day>
+                            <num_pages type="integer">480</num_pages>
+                            <publisher>Henry Holt and Co.</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2014-11-08T06:37:30+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-06-16T07:28:17+00:00</s3_image_at>
+                            <reviews_count type="integer">10946</reviews_count>
+                            <ratings_sum type="integer">4436</ratings_sum>
+                            <ratings_count type="integer">1007</ratings_count>
+                            <text_reviews_count type="integer">238</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2016-12-28T04:05:51+00:00</updated_at>
+                            <created_at type="datetime">2014-05-25T19:45:23+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-9</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">-9</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">37775614</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-9</format_updater_user_id>
+                            <image_updater_user_id type="integer">-41</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-9</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-9</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">4540522</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-9</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-9</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-9</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">37775614</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">22933</id>
+                                <name>Carl Safina</name>
+                                <updated_at type="datetime">2017-03-16T15:43:55+00:00</updated_at>
+                                <created_at type="datetime">2007-01-22T19:20:49+00:00</created_at>
+                                <searched_for_at type="datetime">2007-06-09T09:01:41+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2015-08-04T16:35:05+00:00</image_uploaded_at>
+                                <user_id type="integer">3781896</user_id>
+                                <gender>M</gender>
+                                <country_code>US</country_code>
+                                <born_at type="date">1955-05-23</born_at>
+                                <died_at type="datetime" nil="true"/>
+                                <about>Carl Safina’s work has been recognized with MacArthur, Pew, and Guggenheim Fellowships, and his writing has won Orion, Lannan, and National Academies literary awards and the John Burroughs, James Beard, and George Rabb medals.  He has a PhD in ecology from Rutgers University.  Safina is the inaugural holder of the endowed chair for nature and humanity at Stony Brook University, where he co-chairs the steering committee of the Alan Alda Center for Communicating Science and is founding president of the not-for-profit organization, The Safina Center.  He hosted the 10-part PBS series Saving the Ocean with Carl Safina.  His writing appears in The New York Times, Audubon, Orion, and other periodicals and on the Web at National Geographic News and Views, Huffington Post, and CNN.com.
+
+He lives on Long Island, New York with his wife Patricia, the two best beach-running dogs in the world, some chickens, a couple of parrots, and Frankie the kingsnake.</about>
+                                <uploader_user_id type="integer">3781896</uploader_user_id>
+                                <image_copyright>Photo by Patricia Paladines</image_copyright>
+                                <influences></influences>
+                                <url>http://www.carlsafina.org</url>
+                                <genre1>Nature</genre1>
+                                <genre2>Conservation</genre2>
+                                <genre3>Animals</genre3>
+                                <books_count type="integer">45</books_count>
+                                <reviews_count type="integer">17811</reviews_count>
+                                <ratings_sum type="integer">13252</ratings_sum>
+                                <works_count type="integer">21</works_count>
+                                <hometown>Brooklyn, NY</hometown>
+                                <rating_dist>5:47|4:47|3:23|2:4|1:0|total:121</rating_dist>
+                                <s3_image_at type="datetime" nil="true"/>
+                                <ratings_count type="integer">3085</ratings_count>
+                                <text_reviews_count type="integer">496</text_reviews_count>
+                                <author_program_at type="datetime">2010-05-28T20:51:33+00:00</author_program_at>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">46</fanships_count>
+                                <best_book_id type="integer">22320456</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>safina, carl</sort_by_name>
+                                <shelf_display_name>Safina, Carl</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[wants to read <a only_path="false" href="https://www.goodreads.com/review/show/1925144986">Cutting Through Spiritual Materialism</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1730466284</link>
+            <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Sun, 26 Feb 2017 00:39:40 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1730466284</id>
+                    <review_id type="integer">1925144986</review_id>
+                    <user_id type="integer">19849740</user_id>
+                    <old_status nil="true"/>
+                    <status>to-read</status>
+                    <updated_at type="datetime">2017-02-26T08:39:40+00:00</updated_at>
+                    <review>
+                        <id type="integer">1925144986</id>
+                        <user_id type="integer">19849740</user_id>
+                        <book_id type="integer">295000</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>to-read</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-02-26T08:39:40+00:00</updated_at>
+                        <created_at type="datetime">2017-02-26T08:39:40+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">1309515</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime" nil="true"/>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-02-26T08:39:40+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">295000</id>
+                            <work_id type="integer">1309515</work_id>
+                            <isbn>1570629579</isbn>
+                            <isbn13>9781570629570</isbn13>
+                            <title>Cutting Through Spiritual Materialism</title>
+                            <sort_by_title>cutting through spiritual materialism</sort_by_title>
+                            <author_id type="integer">29133</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description>In this modern spiritual classic, the Tibetan meditation master Chögyam Trungpa highlights the commonest pitfall to which every aspirant on the spiritual path falls prey: what he calls <i>spiritual materialism. </i> The universal tendency, he shows, is to see spirituality as a process of self-improvement—the impulse to develop and refine the ego when the ego is, by nature, essentially empty. "The problem is that ego can convert anything to its own use," he said, "even spirituality." His incisive, compassionate teachings serve to wake us up from this trick we all play on ourselves, and to offer us a far brighter reality: the true and joyous liberation that inevitably involves letting go of the self rather than working to improve it. It is a message that has resonated with students for nearly thirty years, and remains fresh as ever today. <br><br>This new edition includes a foreword by Chögyam Trungpa's son and lineage holder, Sakyong Mipham.</description>
+                            <format>Paperback</format>
+                            <publication_year type="integer">2002</publication_year>
+                            <publication_month type="integer">10</publication_month>
+                            <publication_day type="integer">22</publication_day>
+                            <num_pages type="integer">256</num_pages>
+                            <publisher>Shambhala</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2016-08-25T02:58:18+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2016-08-25T02:58:19+00:00</s3_image_at>
+                            <reviews_count type="integer">12178</reviews_count>
+                            <ratings_sum type="integer">19936</ratings_sum>
+                            <ratings_count type="integer">4671</ratings_count>
+                            <text_reviews_count type="integer">133</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2016-08-25T02:58:19+00:00</updated_at>
+                            <created_at type="datetime">2007-03-09T21:24:54+00:00</created_at>
+                            <author_id_updater_user_id type="integer">1019021</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">1019021</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">-50</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-50</format_updater_user_id>
+                            <image_updater_user_id type="integer">7620446</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-50</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-50</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">431619</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-50</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-50</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-50</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">-50</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">29133</id>
+                                <name>Chögyam Trungpa</name>
+                                <updated_at type="datetime">2017-03-13T22:12:49+00:00</updated_at>
+                                <created_at type="datetime">2007-02-02T02:06:48+00:00</created_at>
+                                <searched_for_at type="datetime">2007-04-16T20:59:54+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2015-04-21T23:40:08+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender>M</gender>
+                                <country_code></country_code>
+                                <born_at type="date">1939-02-28</born_at>
+                                <died_at type="date">1987-04-04</died_at>
+                                <about><b>Vidyadhara Chögyam Trungpa Rinpoche</b> (Tibetan: ཆོས་ རྒྱམ་ དྲུང་པ་ Wylie: <i>Chos rgyam Drung pa</i>; also known as <b>Dorje Dradul of Mukpo</b>, <b>Surmang Trungpa</b>, after his monastery, or <b>Chökyi Gyatso</b>, of which Chögyam is an abbreviation) was a Buddhist meditation master, scholar, teacher, poet, and artist.  He was the 11th descendent in the line of Trungpa tulkus of the Kagyü school of Tibetan Buddhism.  He was also trained in the Nyingma tradition, the oldest of the four schools, and was an adherent of the rimay or "non-sectarian" movement within Tibetan Buddhism, which aspired to bring together and make available all the valuable teachings of the different schools, free of sectarian rivalry.
+
+Trungpa was a significant figure in the dissemination of Tibetan Buddhism to the West, founding Naropa University and establishing the Shambhala Training method, a presentation of the Buddhadharma largely devoid of ethnic trappings. In 1963, he moved to England to study comparative religion, philosophy, and fine arts at Oxford University. During this time, he also studied Japanese flower arranging and received an instructors degree from the Sogetsu school of <i>ikebana</i>. In 1967, he moved to Scotland, where he founded the Samye Ling meditation centre.
+
+Shortly thereafter, a variety of experiences—including a car accident that left him partially paralyzed on the left side of his body—led him to give up his monastic vows and work as a lay teacher. In 1969, he published <i>[b:Meditation in Action|1044900]</i>, the first of fourteen books on the spiritual path published during his lifetime. The following year he married [a:Diana Pybus|202007] and moved to the United States, where he established his first North American meditation centre, Tail of the Tiger (now known as Karmê-Chöling) in Barnet, Vermont.
+
+In 1986, he moved to Nova Scotia, Canada, where hundreds of his students had settled.  That Autumn, after years of heavy alcohol use, he had a cardiac arrest, and he died of heart failure the following Spring.  His legacy is carried on by his son, [a:Sakyong Mipham Rinpoche|28647], under the banner of Shambhala International and the [a:Nalanda Translation Committee|667913].</about>
+                                <uploader_user_id type="integer">39230033</uploader_user_id>
+                                <image_copyright>This photo is public domain.</image_copyright>
+                                <influences></influences>
+                                <url>http://www.shambhala.com/authors/o-t/chogyam-trungpa.html</url>
+                                <genre1>Spirituality</genre1>
+                                <genre2>Poetry</genre2>
+                                <genre3>Religion</genre3>
+                                <books_count type="integer">290</books_count>
+                                <reviews_count type="integer">43018</reviews_count>
+                                <ratings_sum type="integer">74114</ratings_sum>
+                                <works_count type="integer">94</works_count>
+                                <hometown>Kham, Tibet</hometown>
+                                <rating_dist>5:287|4:243|3:136|2:18|1:4|total:688</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T23:04:44+00:00</s3_image_at>
+                                <ratings_count type="integer">17444</ratings_count>
+                                <text_reviews_count type="integer">778</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">180</fanships_count>
+                                <best_book_id type="integer">295000</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>trungpa, chogyam</sort_by_name>
+                                <shelf_display_name>Trungpa, Chögyam</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[started reading <a only_path="false" href="https://www.goodreads.com/review/show/1877691020">Half of a Yellow Sun</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1729117486</link>
+            <image_url>https://images.gr-assets.com/users/1313087529p2/6007102.jpg</image_url>
+            <actor>
+                <id type="integer">6007102</id>
+                <name>Nora</name>
+                <image_url>https://images.gr-assets.com/users/1313087529p2/6007102.jpg</image_url>
+                <link>https://www.goodreads.com/user/show/6007102-nora</link>
+            </actor>
+            <updated_at>Sat, 25 Feb 2017 04:33:20 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1729117486</id>
+                    <review_id type="integer">1877691020</review_id>
+                    <user_id type="integer">6007102</user_id>
+                    <old_status>to-read</old_status>
+                    <status>currently-reading</status>
+                    <updated_at type="datetime">2017-02-25T12:33:20+00:00</updated_at>
+                    <review>
+                        <id type="integer">1877691020</id>
+                        <user_id type="integer">6007102</user_id>
+                        <book_id type="integer">18749</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>currently-reading</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-02-25T12:33:20+00:00</updated_at>
+                        <created_at type="datetime">2017-01-13T12:12:56+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">1651408</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime">2017-02-25T12:33:20+00:00</started_at>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-02-25T12:33:20+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">18749</id>
+                            <work_id type="integer">1651408</work_id>
+                            <isbn>1400044162</isbn>
+                            <isbn13>9781400044160</isbn13>
+                            <title>Half of a Yellow Sun</title>
+                            <sort_by_title>half of a yellow sun</sort_by_title>
+                            <author_id type="integer">11291</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description nil="true"/>
+                            <format>Hardcover</format>
+                            <publication_year type="integer">2006</publication_year>
+                            <publication_month type="integer">9</publication_month>
+                            <publication_day type="integer">12</publication_day>
+                            <num_pages type="integer">433</num_pages>
+                            <publisher>Knopf</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url>http://www.halfofayellowsun.com/</url>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2012-01-30T14:45:17+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-05-16T14:50:23+00:00</s3_image_at>
+                            <reviews_count type="integer">104179</reviews_count>
+                            <ratings_sum type="integer">182970</ratings_sum>
+                            <ratings_count type="integer">42806</ratings_count>
+                            <text_reviews_count type="integer">3742</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2015-05-16T14:50:23+00:00</updated_at>
+                            <created_at type="datetime">2006-12-26T00:33:45+00:00</created_at>
+                            <author_id_updater_user_id type="integer">-50</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">1253753</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">7556377</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-50</format_updater_user_id>
+                            <image_updater_user_id type="integer">241586</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-50</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-50</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">7556377</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">417925</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-50</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-50</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">3276709</title_updater_user_id>
+                            <url_updater_user_id type="integer">414307</url_updater_user_id>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">11291</id>
+                                <name>Chimamanda Ngozi Adichie</name>
+                                <updated_at type="datetime">2017-03-16T17:29:18+00:00</updated_at>
+                                <created_at type="datetime">2006-12-26T00:33:45+00:00</created_at>
+                                <searched_for_at type="datetime">2007-02-20T21:28:23+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2016-09-21T08:20:19+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender nil="true"/>
+                                <country_code>NG</country_code>
+                                <born_at type="date">1977-09-15</born_at>
+                                <died_at type="datetime" nil="true"/>
+                                <about>Chimamanda Ngozi Adichie is a Nigerian author. Her best known novels are <i>[b: Purple Hibiscus|126381] (2003)</i>, <i>[b: Half of a Yellow Sun|18749]</i> (2006), and <i>[b: Americanah|15796700]</i> (2013).
+
+She was born in Enugu, Nigeria, the fifth of six children to Igbo parents. She studied medicine and pharmacy at the University of Nigeria for a year and a half. At nineteen, Chimamanda left for the U.S. to study communication at Drexel University in Philadelphia for two years, then went on to pursue a degree in communication and political science at Eastern Connecticut State University. Chimamanda graduated summa cum laude from Eastern in 2001, and then completed a master's degree in creative writing at Johns Hopkins University, Baltimore.
+
+It was during her senior year at Eastern that she started working on her first novel, <i>[b: Purple Hibiscus|126381]</i>, which was published in October 2003.  
+
+Chimamanda was a Hodder fellow at Princeton University during the 2005-2006 academic year, and earned an MA in African Studies from Yale University in 2008.</about>
+                                <uploader_user_id type="integer">18795516</uploader_user_id>
+                                <image_copyright>http://www.seawanhakapress.com/wp-content/uploads/2014/09/Book-Review.png</image_copyright>
+                                <influences></influences>
+                                <url>http://chimamanda.com/</url>
+                                <genre1>Literature & Fiction</genre1>
+                                <genre2></genre2>
+                                <genre3></genre3>
+                                <books_count type="integer">505</books_count>
+                                <reviews_count type="integer">620406</reviews_count>
+                                <ratings_sum type="integer">1123671</ratings_sum>
+                                <works_count type="integer">57</works_count>
+                                <hometown>Enugu</hometown>
+                                <rating_dist>5:3114|4:4343|3:1764|2:311|1:68|total:9600</rating_dist>
+                                <s3_image_at type="datetime" nil="true"/>
+                                <ratings_count type="integer">263465</ratings_count>
+                                <text_reviews_count type="integer">27849</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">2928</fanships_count>
+                                <best_book_id type="integer">15796700</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>adichie, chimamanda ngozi</sort_by_name>
+                                <shelf_display_name>Adichie, Chimamanda Ngozi</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+        <update type="review">
+            <action_text>
+                <![CDATA[gave 4 stars to <a href="https://www.goodreads.com/book/show/1215032.The_Wise_Man_s_Fear">The Wise Man's Fear (The Kingkiller Chronicle, #2)</a> by<a href="https://www.goodreads.com/author/show/108424.Patrick_Rothfuss">Patrick Rothfuss</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/review/show/1891003067</link>
+            <image_url>https://images.gr-assets.com/books/1452624392s/1215032.jpg</image_url>
+            <actor>
+                <id type="integer">19849740</id>
+                <name>Luiza</name>
+                <image_url>https://s.gr-assets.com/assets/nophoto/user/f_50x66-6a03a5c12233c941481992b82eea8d23.png</image_url>
+                <link>https://www.goodreads.com/user/show/19849740-luiza</link>
+            </actor>
+            <updated_at>Fri, 24 Feb 2017 23:38:30 -0800</updated_at>
+            <action type="rating">
+                <rating>4</rating>
+            </action>
+            <object>
+                <book>
+                    <id>1215032</id>
+                    <title>
+                        <![CDATA[The Wise Man's Fear (The Kingkiller Chronicle, #2)]]>
+                    </title>
+                    <link>https://www.goodreads.com/book/show/1215032.The_Wise_Man_s_Fear</link>
+                    <authors>
+                        <author>
+                            <id>108424</id>
+                            <name>Patrick Rothfuss</name>
+                            <role></role>
+                            <image_url nophoto='false'>
+                                <![CDATA[https://images.gr-assets.com/authors/1351307341p5/108424.jpg]]>
+                            </image_url>
+                            <small_image_url nophoto='false'>
+                                <![CDATA[https://images.gr-assets.com/authors/1351307341p2/108424.jpg]]>
+                            </small_image_url>
+                            <link>
+                                <![CDATA[https://www.goodreads.com/author/show/108424.Patrick_Rothfuss]]>
+                            </link>
+                            <average_rating>4.49</average_rating>
+                            <ratings_count>769887</ratings_count>
+                            <text_reviews_count>51567</text_reviews_count>
+                        </author>
+                    </authors>
+                </book>
+            </object>
+        </update>
+        <update type="readstatus">
+            <action_text>
+                <![CDATA[is currently reading <a only_path="false" href="https://www.goodreads.com/review/show/1919075280">The Ethics of Ambiguity</a>]]>
+            </action_text>
+            <link>https://www.goodreads.com/read_statuses/1721368565</link>
+            <image_url>https://images.gr-assets.com/users/1313087529p2/6007102.jpg</image_url>
+            <actor>
+                <id type="integer">6007102</id>
+                <name>Nora</name>
+                <image_url>https://images.gr-assets.com/users/1313087529p2/6007102.jpg</image_url>
+                <link>https://www.goodreads.com/user/show/6007102-nora</link>
+            </actor>
+            <updated_at>Mon, 20 Feb 2017 01:06:05 -0800</updated_at>
+            <object>
+                <read_status>
+                    <id type="integer">1721368565</id>
+                    <review_id type="integer">1919075280</review_id>
+                    <user_id type="integer">6007102</user_id>
+                    <old_status nil="true"/>
+                    <status>currently-reading</status>
+                    <updated_at type="datetime">2017-02-20T09:06:05+00:00</updated_at>
+                    <review>
+                        <id type="integer">1919075280</id>
+                        <user_id type="integer">6007102</user_id>
+                        <book_id type="integer">21119</book_id>
+                        <rating type="integer">0</rating>
+                        <read_status>currently-reading</read_status>
+                        <sell_flag type="boolean">false</sell_flag>
+                        <review nil="true"/>
+                        <recommendation nil="true"/>
+                        <read_at type="datetime" nil="true"/>
+                        <updated_at type="datetime">2017-02-20T09:06:05+00:00</updated_at>
+                        <created_at type="datetime">2017-02-20T09:06:04+00:00</created_at>
+                        <comments_count type="integer">0</comments_count>
+                        <weight type="integer">0</weight>
+                        <ratings_sum type="integer">0</ratings_sum>
+                        <ratings_count type="integer">0</ratings_count>
+                        <notes nil="true"/>
+                        <spoiler_flag type="boolean">false</spoiler_flag>
+                        <recommender_user_id1 type="integer">0</recommender_user_id1>
+                        <recommender_user_name1 nil="true"/>
+                        <work_id type="integer">1257058</work_id>
+                        <read_count>0</read_count>
+                        <last_comment_at type="datetime" nil="true"/>
+                        <started_at type="datetime">2017-02-20T09:06:05+00:00</started_at>
+                        <hidden_flag type="boolean">false</hidden_flag>
+                        <language_code type="integer" nil="true"/>
+                        <last_revision_at type="datetime">2017-02-20T09:06:05+00:00</last_revision_at>
+                        <non_friends_rating_count type="integer">0</non_friends_rating_count>
+                        <book>
+                            <id type="integer">21119</id>
+                            <work_id type="integer">1257058</work_id>
+                            <isbn>080650160X</isbn>
+                            <isbn13>9780806501604</isbn13>
+                            <title>The Ethics of Ambiguity</title>
+                            <sort_by_title>ethics of ambiguity, the</sort_by_title>
+                            <author_id type="integer">5548</author_id>
+                            <author_role nil="true"/>
+                            <asin nil="true"/>
+                            <description>Simone de Beauvoir, novelist, dramatist, and philosopher, was the most distinguished woman writer in modern France. A leading exponent of French existentialism, her work complements, though it is independent of, that of Jean-Paul Sartre. In "The Ethics of Ambiguity," Madame de Beauvoir penetrates at once to the central ethical problems of modern man: what shall he do, how shall he go about making values, in the face of this awareness of the absurdity of his existence? She forces the reader to face the absurdity of the human condition and then, having done so, proceeds to develop a dialectic of ambiguity which will enable him not to master the chaos, but to create with it.</description>
+                            <format>Paperback</format>
+                            <publication_year type="integer">2000</publication_year>
+                            <publication_month type="integer">6</publication_month>
+                            <publication_day type="integer">1</publication_day>
+                            <num_pages type="integer">162</num_pages>
+                            <publisher>Citadel</publisher>
+                            <language_code>eng</language_code>
+                            <edition_information nil="true"/>
+                            <url nil="true"/>
+                            <source_url nil="true"/>
+                            <image_uploaded_at type="datetime">2013-12-28T01:17:15+00:00</image_uploaded_at>
+                            <s3_image_at type="datetime">2015-05-16T14:49:13+00:00</s3_image_at>
+                            <reviews_count type="integer">13125</reviews_count>
+                            <ratings_sum type="integer">12846</ratings_sum>
+                            <ratings_count type="integer">3127</ratings_count>
+                            <text_reviews_count type="integer">106</text_reviews_count>
+                            <book_authors_count type="integer">0</book_authors_count>
+                            <updated_at type="datetime">2015-05-16T14:49:13+00:00</updated_at>
+                            <created_at type="datetime">2006-12-28T10:33:16+00:00</created_at>
+                            <author_id_updater_user_id type="integer">0</author_id_updater_user_id>
+                            <author_role_updater_user_id type="integer">4134979</author_role_updater_user_id>
+                            <description_updater_user_id type="integer">-51</description_updater_user_id>
+                            <edition_information_updater_user_id type="integer" nil="true"/>
+                            <format_updater_user_id type="integer">-50</format_updater_user_id>
+                            <image_updater_user_id type="integer">-9</image_updater_user_id>
+                            <isbn_updater_user_id type="integer">-50</isbn_updater_user_id>
+                            <isbn13_updater_user_id type="integer">-50</isbn13_updater_user_id>
+                            <language_updater_user_id type="integer">-9</language_updater_user_id>
+                            <num_pages_updater_user_id type="integer">-50</num_pages_updater_user_id>
+                            <publication_date_updater_user_id type="integer">-50</publication_date_updater_user_id>
+                            <publisher_updater_user_id type="integer">-50</publisher_updater_user_id>
+                            <title_updater_user_id type="integer">4134979</title_updater_user_id>
+                            <url_updater_user_id type="integer" nil="true"/>
+                            <title_language_code nil="true"/>
+                            <publisher_language_code nil="true"/>
+                            <description_language_code nil="true"/>
+                            <asin_updater_user_id type="integer" nil="true"/>
+                            <author>
+                                <id type="integer">5548</id>
+                                <name>Simone de Beauvoir</name>
+                                <updated_at type="datetime">2017-03-15T21:45:26+00:00</updated_at>
+                                <created_at type="datetime">2006-12-09T09:13:45+00:00</created_at>
+                                <searched_for_at type="datetime">2006-12-28T10:33:19+00:00</searched_for_at>
+                                <image_uploaded_at type="datetime">2013-10-25T17:38:10+00:00</image_uploaded_at>
+                                <user_id type="integer" nil="true"/>
+                                <gender>F</gender>
+                                <country_code>FR</country_code>
+                                <born_at type="date">1908-01-09</born_at>
+                                <died_at type="date">1986-04-14</died_at>
+                                <about>"Simone de Beauvoir was a French author and philosopher. She wrote novels, monographs on philosophy, politics, and social issues, essays, biographies, and an autobiography. She is now best known for her metaphysical novels, including <i>She Came to Stay</i> and <i>The Mandarins</i>, and for her 1949 treatise <i>The Second Sex</i>, a detailed analysis of women's oppression and a foundational tract of contemporary feminism."
+</about>
+                                <uploader_user_id type="integer">18795516</uploader_user_id>
+                                <image_copyright>http://breastreading.wordpress.com/2012/05/11/%D7%9E%D7%A7%D7%99%D7%90%D7%99%D7%9D-%D7%A2%D7%9C%D7%99-%D7%95%D7%90%D7%A0%D7%99-%D7%A7%D7%95%D7%A8%D7%90%D7%AA-%D7%A7%D7%94%D7%9C%D7%AA-%D7%97%D7%9C%D7%A</image_copyright>
+                                <influences>[a:Georg Hegel|6188], [a:Immanuel Kant|11038], [a:Jean-Paul Sartre|1466], [a:Edmund Husserl|180033], [a:Kierkegaard|6172], [a:Heidegger|6191], [a:Karl Marx|7084], [a:Friderich Nietzsche|1938],  [a:Marquis de Sade|2885224], [a:Merleau-Ponty|118600], [a:Henri Bergson|67070], [a:John Dos Passos|4778]</influences>
+                                <url>http://plato.stanford.edu/entries/beauvoir/</url>
+                                <genre1>Literature & Fiction</genre1>
+                                <genre2>Nonfiction</genre2>
+                                <genre3>Politics</genre3>
+                                <books_count type="integer">1185</books_count>
+                                <reviews_count type="integer">191841</reviews_count>
+                                <ratings_sum type="integer">225778</ratings_sum>
+                                <works_count type="integer">126</works_count>
+                                <hometown>Paris</hometown>
+                                <rating_dist>5:2780|4:3656|3:2315|2:489|1:128|total:9368</rating_dist>
+                                <s3_image_at type="datetime">2015-05-14T22:55:59+00:00</s3_image_at>
+                                <ratings_count type="integer">55915</ratings_count>
+                                <text_reviews_count type="integer">3232</text_reviews_count>
+                                <author_program_at type="datetime" nil="true"/>
+                                <postal_code nil="true"/>
+                                <fanships_count type="integer">1740</fanships_count>
+                                <best_book_id type="integer">457264</best_book_id>
+                                <name_language_code nil="true"/>
+                                <sort_by_name>beauvoir, simone de</sort_by_name>
+                                <shelf_display_name>Beauvoir, Simone de</shelf_display_name>
+                                <gender_custom nil="true"/>
+                                <gender_pronoun nil="true"/>
+                            </author>
+                        </book>
+                    </review>
+                </read_status>
+            </object>
+        </update>
+    </updates>
+</GoodreadsResponse>
