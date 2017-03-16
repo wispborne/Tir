@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads.api.model
+package com.thunderclouddev.goodreadsapisdk
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Root

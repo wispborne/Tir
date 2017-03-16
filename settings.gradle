@@ -1,1 +1,1 @@
-include ':app', ':RxSocialConnect-HawkEncryption'
+include ':app', ':RxSocialConnect-HawkEncryption', ':GoodreadsApiSdk'

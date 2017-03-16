@@ -1,5 +1,6 @@
-package com.thunderclouddev.tirforgoodreads.api.model
+package com.thunderclouddev.goodreadsapisdk
 
+import com.thunderclouddev.goodreadsapisdk.Author
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.Root
 

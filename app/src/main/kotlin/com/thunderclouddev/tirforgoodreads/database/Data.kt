@@ -1,6 +1,6 @@
 package com.thunderclouddev.tirforgoodreads.database
 
-import com.thunderclouddev.tirforgoodreads.api.GoodreadsApi
+import com.thunderclouddev.goodreadsapisdk.GoodreadsApi
 import com.thunderclouddev.tirforgoodreads.database.model.AuthorEntity
 import com.thunderclouddev.tirforgoodreads.database.model.BookEntity
 import com.thunderclouddev.tirforgoodreads.empty
@@ -84,7 +84,7 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
 
     private fun getBooksByAuthorFromDatabase(authorId: String) = database.getBooksByAuthor(authorId)
 
-    private fun mapBooksApiToView(apiBook: com.thunderclouddev.tirforgoodreads.api.model.Book): Book {
+    private fun mapBooksApiToView(apiBook: com.thunderclouddev.goodreadsapisdk.Book): Book {
         return Book(id = apiBook.id,
                 isbn = apiBook.isbn,
                 isbn13 = apiBook.isbn13,
@@ -109,7 +109,7 @@ class Data(private val api: GoodreadsApi, private val database: RequeryDatabase)
                 authors = mapAuthorsApiToView(apiBook.authors.items))
     }
 
-    private fun mapAuthorsApiToView(apiAuthors: ArrayList<com.thunderclouddev.tirforgoodreads.api.model.Author>): List<Author> {
+    private fun mapAuthorsApiToView(apiAuthors: ArrayList<com.thunderclouddev.goodreadsapisdk.Author>): List<Author> {
         return apiAuthors
                 .map { author ->
                     Author(id = author.id,

@@ -1,7 +1,7 @@
 package com.thunderclouddev.tirforgoodreads
 
-import com.thunderclouddev.tirforgoodreads.api.model.Author
-import com.thunderclouddev.tirforgoodreads.api.model.Book
+import com.thunderclouddev.goodreadsapisdk.Author
+import com.thunderclouddev.goodreadsapisdk.Book
 
 /**
  * @author David Whitman on 11 Mar, 2017.

@@ -2,6 +2,7 @@ package com.thunderclouddev.tirforgoodreads.api
 
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.github.scribejava.core.builder.ServiceBuilder
+import com.thunderclouddev.goodreadsapisdk.GoodreadsApi
 import com.thunderclouddev.tirforgoodreads.BuildConfig
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit

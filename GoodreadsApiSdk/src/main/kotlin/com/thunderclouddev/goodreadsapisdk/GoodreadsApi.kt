@@ -1,7 +1,5 @@
-package com.thunderclouddev.tirforgoodreads.api
+package com.thunderclouddev.goodreadsapisdk
 
-import com.thunderclouddev.tirforgoodreads.api.model.BooksByAuthorResponse
-import com.thunderclouddev.tirforgoodreads.api.model.FriendUpdatesResponse
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
