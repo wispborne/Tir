@@ -1,4 +1,4 @@
-package com.thunderclouddev.goodreadsapisdk
+package com.thunderclouddev.goodreadsapisdk.api
 
 import org.simpleframework.xml.Element
 import org.simpleframework.xml.ElementList
@@ -6,7 +6,7 @@ import org.simpleframework.xml.ElementList
 /**
  * Created by David Whitman on 11 Mar, 2017.
  */
-data class Author(
+internal data class Author(
         @field:Element(name = "id") var id: String = "",
         @field:Element(name = "name") var name: String = "",
         @field:Element(name = "link", required = false) var link: String = "",

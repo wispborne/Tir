@@ -1,13 +1,14 @@
-package com.thunderclouddev.goodreadsapisdk
+package com.thunderclouddev.goodreadsapisdk.api
 
+import org.simpleframework.xml.Attribute
 import org.simpleframework.xml.Element
-import org.simpleframework.xml.ElementList
 
 /**
  * @author David Whitman on 16 Mar, 2017.
  */
 @Element(name = "update")
-data class Update(
+internal data class Update(
+        @field:Attribute(name = "type") var type: String = "",
         @field:Element(name = "action_text", required = false) var actionText: String = "",
         @field:Element(name = "link", required = false) var link: String = "",
         @field:Element(name = "image_url", required = false) var imageUrl: String = "",

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.widget.Toast
 import com.github.scribejava.core.builder.ServiceBuilder
+import com.thunderclouddev.goodreadsapisdk.api.GoodreadsOAuthApi
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
 
@@ -23,7 +24,7 @@ class SignInActivity : AppCompatActivity() {
                 .apiKey("KUtQGqdhmKy1nUyQnFZRzA")
                 .apiSecret("qlhTxMwfzA7eOeCVKNiG9BeCjwuaf6xo7F2Jjqsfzeo")
                 .callback("oauth://goodreads")
-                .build(GoodreadsApi())
+                .build(GoodreadsOAuthApi())
 
         RxSocialConnect.with(this@SignInActivity, goodReadsService)
                 .subscribe { response ->

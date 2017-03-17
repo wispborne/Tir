@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads.model
+package com.thunderclouddev.goodreadsapisdk.model
 
 /**
  * Created by David Whitman on 11 Mar, 2017.

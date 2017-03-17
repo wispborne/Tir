@@ -2,14 +2,18 @@ package com.thunderclouddev.tirforgoodreads
 
 import android.app.Application
 import com.facebook.stetho.Stetho
+import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.github.scribejava.core.oauth.OAuth10aService
 import com.jakewharton.threetenabp.AndroidThreeTen
 import com.squareup.leakcanary.LeakCanary
-import com.thunderclouddev.tirforgoodreads.api.GoodreadsApiBuilder
+import com.thunderclouddev.goodreadsapisdk.GoodreadsApi
+import com.thunderclouddev.goodreadsapisdk.api.GoodreadsOAuthApi
+import com.thunderclouddev.tirforgoodreads.api.OAuth1Interceptor
 import com.thunderclouddev.tirforgoodreads.database.Data
 import com.thunderclouddev.tirforgoodreads.database.RequeryDatabase
 import com.thunderclouddev.tirforgoodreads.logging.timber.Timber
 import io.victoralbertos.jolyglot.GsonSpeaker
+import okhttp3.OkHttpClient
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
 
 
@@ -19,7 +23,7 @@ import org.fuckboilerplate.rx_social_connect.RxSocialConnect
 class BaseApp : Application() {
     companion object {
         lateinit var data: Data
-        lateinit var goodreadsService: OAuth10aService
+        lateinit var goodreadsOAuthService: OAuth10aService
     }
 
     override fun onCreate() {
@@ -30,14 +34,25 @@ class BaseApp : Application() {
         RxSocialConnect.register(this, "GoodreadsKey")
                 .using(GsonSpeaker())
 
+
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
 
-        val goodreadsApiBuilder = GoodreadsApiBuilder()
-        val goodreadsApi = goodreadsApiBuilder.goodreadsApi
-        val database = RequeryDatabase(this)
-        data = Data(goodreadsApi, database)
-        goodreadsService = goodreadsApiBuilder.goodreadsService
+        goodreadsOAuthService = com.github.scribejava.core.builder.ServiceBuilder()
+                .apiKey("KUtQGqdhmKy1nUyQnFZRzA") // TODO move these
+                .apiSecret("qlhTxMwfzA7eOeCVKNiG9BeCjwuaf6xo7F2Jjqsfzeo")
+                .callback(GoodreadsOAuthApi.CALLBACK_URI)
+                .build(GoodreadsOAuthApi())
+
+        val builder = OkHttpClient.Builder()
+                .addNetworkInterceptor(OAuth1Interceptor(goodreadsOAuthService))
+
+        if (BuildConfig.DEBUG) {
+            builder.addNetworkInterceptor(StethoInterceptor())
+        }
+
+        val goodreadsApi = GoodreadsApi(builder.build())
+        data = Data(goodreadsApi, RequeryDatabase(this))
     }
 }

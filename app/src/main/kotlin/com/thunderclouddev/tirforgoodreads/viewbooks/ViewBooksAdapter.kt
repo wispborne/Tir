@@ -10,7 +10,7 @@ import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.SortedListAdapter
 import com.thunderclouddev.tirforgoodreads.databinding.BookItemBinding
 import com.thunderclouddev.tirforgoodreads.getOrDefaultIfNullOrBlank
-import com.thunderclouddev.tirforgoodreads.model.Book
+import com.thunderclouddev.goodreadsapisdk.model.Book
 
 /**
  * @author David Whitman on 11 Mar, 2017.

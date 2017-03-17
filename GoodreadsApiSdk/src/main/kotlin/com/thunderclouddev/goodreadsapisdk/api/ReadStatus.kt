@@ -1,4 +1,4 @@
-package com.thunderclouddev.goodreadsapisdk
+package com.thunderclouddev.goodreadsapisdk.api
 
 import org.simpleframework.xml.Element
 
@@ -6,7 +6,7 @@ import org.simpleframework.xml.Element
  * Created by David Whitman on 16 Mar, 2017.
  */
 @Element(name = "read_status")
-data class ReadStatus(
+internal data class ReadStatus(
         @field:Element(name = "id") var id: Int = 0,
         @field:Element(name = "review_id", required = false) var reviewId: Int = 0,
         @field:Element(name = "user_id", required = false) var userId: Int = 0,

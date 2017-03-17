@@ -50,7 +50,7 @@ class FeedController : Controller() {
 
         })
 
-        RxSocialConnect.with(activity, BaseApp.goodreadsService)
+        RxSocialConnect.with(activity, BaseApp.goodreadsOAuthService)
                 .singleOrError()
                 .doAfterSuccess { response ->
                     Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()

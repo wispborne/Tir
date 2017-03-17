@@ -1,6 +1,8 @@
 package com.thunderclouddev.tirforgoodreads
 
 import android.view.View
+import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
+import org.threeten.bp.Instant
 
 /**
  * Created by David Whitman on 11 Mar, 2017.

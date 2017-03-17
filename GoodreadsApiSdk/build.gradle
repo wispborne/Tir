@@ -25,18 +25,36 @@ android {
 }
 
 dependencies {
+    def retrofit_version = "2.2.0"
+    def rxjava_retrofit_adapter_version = "2.2.0"
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
+
+    // RxJava
     compile "io.reactivex.rxjava2:rxjava:$rxjava_version"
 
     // Xml serialization
-    compile('com.squareup.retrofit2:converter-simplexml:2.2.0') {
+    compile("com.squareup.retrofit2:converter-simplexml:$retrofit_version") {
         exclude module: 'stax'
         exclude module: 'stax-api'
         exclude module: 'xpp3'
     }
 
-    testCompile 'junit:junit:4.12'
+    // Networking
+    compile "com.squareup.retrofit2:retrofit:$retrofit_version"
+    compile "com.squareup.okhttp3:okhttp:$okhttp_version"
+
+    // RxJava for Retrofit
+    compile "com.squareup.retrofit2:adapter-rxjava2:$rxjava_retrofit_adapter_version"
+
+    // OAuth
+    compile "com.github.scribejava:scribejava-apis:$scribejava_version"
+
+    // Backport Java 8 datetime package
+    compile "com.jakewharton.threetenabp:threetenabp:$threetenabp_version"
+
+    testCompile "junit:junit:$junit_version"
 }
 repositories {
     mavenCentral()

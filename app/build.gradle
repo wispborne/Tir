@@ -52,71 +52,77 @@ android {
 }
 
 dependencies {
-    def supportLibVersion = "25.2.0"
-    def requeryVersion = "1.2.0"
+    def support_lib_version = "25.3.0"
+    def requery_version = "1.2.0"
+    def conductor_version = "2.0.4"
+    def rxandroid_version = "2.0.1"
+    def autodispose_version = "0.1.0"
+    def picasso_version = "2.5.1"
+    def jolyglot_version = "0.0.3"
+    def RxActivityResult_version = "0.4.1-2.x"
+    def hawk_version = "2.0.1"
+    def stetho_version = "1.4.2"
+    def leakcanary_version = "1.5"
+
     compile fileTree(dir: 'libs', include: ['*.jar'])
     compile project(':RxSocialConnect-HawkEncryption')
     compile project(':GoodreadsApiSdk')
 
     // Data binding
-    compile "com.android.support:appcompat-v7:$supportLibVersion"
-    compile "com.android.support:design:$supportLibVersion"
-    compile 'com.android.support.constraint:constraint-layout:1.0.1'
+    compile "com.android.support:appcompat-v7:$support_lib_version"
+    compile "com.android.support:design:$support_lib_version"
     kapt "com.android.databinding:compiler:$gradle_version"
 
     // Kotlin
     compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
     // Replace fragments
-    compile 'com.bluelinelabs:conductor:2.0.4'
+    compile "com.bluelinelabs:conductor:$conductor_version"
 
     // RxJava
     compile "io.reactivex.rxjava2:rxjava:$rxjava_version"
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile "io.reactivex.rxjava2:rxandroid:$rxandroid_version"
 
     // Automatic Rx disposal
-    compile 'com.uber.autodispose:autodispose:0.1.0'
-    compile 'com.uber.autodispose:autodispose-android:0.1.0'
+    compile "com.uber.autodispose:autodispose:$autodispose_version"
+    compile "com.uber.autodispose:autodispose-android:$autodispose_version"
 
     // Networking
-    compile 'com.squareup.retrofit2:retrofit:2.2.0'
-    compile 'com.squareup.okhttp3:okhttp:3.6.0'
+    compile "com.squareup.okhttp3:okhttp:$okhttp_version"
 
-    // RxJava for Retrofit
-    compile 'com.squareup.retrofit2:adapter-rxjava2:2.2.0'
     // Image loading
-    compile 'com.squareup.picasso:picasso:2.5.1'
+    compile "com.squareup.picasso:picasso:$picasso_version"
 
     // Database
-    compile "io.requery:requery:$requeryVersion"
-    compile "io.requery:requery-android:$requeryVersion" // for android
-    compile "io.requery:requery-kotlin:$requeryVersion"
-    kapt "io.requery:requery-processor:$requeryVersion"
+    compile "io.requery:requery:$requery_version"
+    compile "io.requery:requery-android:$requery_version" // for android
+    compile "io.requery:requery-kotlin:$requery_version"
+    kapt "io.requery:requery-processor:$requery_version"
 
     // OAuth
 //    compile ('com.github.VictorAlbertos.RxSocialConnect-Android:okhttp_interceptors:1.0.1-2.x') {
 //        exclude module: 'RxSocialConnect'
 //    }
-    compile 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
+    compile "com.github.VictorAlbertos.Jolyglot:gson:$jolyglot_version"
     // RxSC dependencies
-    compile 'com.github.scribejava:scribejava-apis:3.2.0'
-    compile "com.github.VictorAlbertos:RxActivityResult:0.4.1-2.x"
-    compile 'com.github.VictorAlbertos.Jolyglot:api:0.0.3'
-    compile 'com.orhanobut:hawk:2.0.1'
+    compile "com.github.scribejava:scribejava-apis:$scribejava_version"
+    compile "com.github.VictorAlbertos:RxActivityResult:$RxActivityResult_version"
+    compile "com.github.VictorAlbertos.Jolyglot:api:$jolyglot_version"
+    compile "com.orhanobut:hawk:$hawk_version"
 
     // Backport Java 8 datetime package
-    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+    compile "com.jakewharton.threetenabp:threetenabp:$threetenabp_version"
 
     // Debug using chrome dev tools
-    debugCompile 'com.facebook.stetho:stetho:1.4.1'
-    compile 'com.facebook.stetho:stetho-okhttp3:1.4.2'
+    debugCompile "com.facebook.stetho:stetho:$stetho_version"
+    compile "com.facebook.stetho:stetho-okhttp3:$stetho_version"
     // Find memory leaks
-    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    debugCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
 
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testCompile 'junit:junit:4.12'
+//    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+//        exclude group: 'com.android.support', module: 'support-annotations'
+//    })
+    testCompile "junit:junit:$junit_version"
 }
 
 repositories {

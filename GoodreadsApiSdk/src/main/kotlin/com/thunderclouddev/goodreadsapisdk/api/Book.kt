@@ -1,13 +1,13 @@
-package com.thunderclouddev.goodreadsapisdk
+package com.thunderclouddev.goodreadsapisdk.api
 
-import com.thunderclouddev.goodreadsapisdk.Author
-import com.thunderclouddev.goodreadsapisdk.Authors
+import com.thunderclouddev.goodreadsapisdk.api.Author
+import com.thunderclouddev.goodreadsapisdk.api.Authors
 import org.simpleframework.xml.Element
 
 /**
  * @author David Whitman on 11 Mar, 2017.
  */
-data class Book(@field:Element(name = "id") var id: String = "",
+internal data class Book(@field:Element(name = "id") var id: String = "",
                 @field:Element(name = "isbn", required = false) var isbn: String = "",
                 @field:Element(name = "isbn13", required = false) var isbn13: String = "",
                 @field:Element(name = "title", required = false) var title: String = "",

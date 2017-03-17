@@ -1,4 +1,7 @@
-package com.thunderclouddev.tirforgoodreads.model
+package com.thunderclouddev.goodreadsapisdk.model
+
+import com.thunderclouddev.goodreadsapisdk.model.Author
+import com.thunderclouddev.goodreadsapisdk.model.feed.FeedItem
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -26,4 +29,4 @@ data class Book(
         var description: String,
         var published: String, // Year
         var authors: List<Author>
-)
+) : FeedItem.FeedObject

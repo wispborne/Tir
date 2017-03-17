@@ -64,7 +64,7 @@ class ViewBooksController : Controller() {
 
         })
 
-        RxSocialConnect.with(activity, BaseApp.goodreadsService)
+        RxSocialConnect.with(activity, BaseApp.goodreadsOAuthService)
                 .subscribe({ response ->
                     Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()
                     TimberKt.d { response.token().token }
