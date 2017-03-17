@@ -92,7 +92,7 @@ internal object ModelMapper {
             userId = updateObject.readStatus.userId,
             oldStatus = updateObject.readStatus.oldStatus,
             status = updateObject.readStatus.status,
-            updatedAt = updateObject.readStatus.updatedAt,
+            updatedAt = updateObject.readStatus.updatedAt.toInstant(Instant.MIN),
             review = mapReviewApiToView(updateObject.readStatus.review)
     )
 

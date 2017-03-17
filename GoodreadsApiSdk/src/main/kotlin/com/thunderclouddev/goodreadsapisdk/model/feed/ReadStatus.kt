@@ -1,6 +1,7 @@
 package com.thunderclouddev.goodreadsapisdk.model.feed
 
 import com.thunderclouddev.goodreadsapisdk.model.Review
+import org.threeten.bp.Instant
 
 /**
  * An update on an user's reading status
@@ -11,6 +12,6 @@ data class ReadStatus(
         val userId: Int,
         val oldStatus: String,
         val status: String,
-        val updatedAt: String,
+        val updatedAt: Instant,
         val review: Review
 ) : FeedItem.FeedObject

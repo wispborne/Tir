@@ -1,8 +1,7 @@
 package com.thunderclouddev.tirforgoodreads
 
 import android.view.View
-import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
-import org.threeten.bp.Instant
+import com.thunderclouddev.tirforgoodreads.uri.Uri
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -46,3 +45,5 @@ var View.showing: Boolean
 fun <T> Iterable<T>.firstOr(defaultItem: T): T {
     return this.firstOrNull() ?: defaultItem
 }
+
+fun String.isUri() = Uri.parse(this).scheme.isNotNullOrBlank() && Uri.parse(this).authority.isNotNullOrBlank()

@@ -42,7 +42,7 @@ class ViewBooksController : Controller() {
         binding.bookList.layoutManager = LinearLayoutManager(activity)
         binding.booksRefreshLayout.setOnRefreshListener { refresh() }
 
-        booksAdapter = ViewBooksAdapter(activity!!)
+        booksAdapter = ViewBooksAdapter()
         binding.bookList.adapter = booksAdapter
 
         binding.getFeed.setOnClickListener {

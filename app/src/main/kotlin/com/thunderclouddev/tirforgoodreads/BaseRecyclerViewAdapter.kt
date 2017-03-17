@@ -23,7 +23,7 @@ abstract class BaseRecyclerViewAdapter<T : RecyclerView.ViewHolder> : RecyclerVi
             performBind(item)
         }
 
-        protected abstract fun performBind(item: T)
+        protected abstract fun performBind(viewModel: T)
 
     }
 }
