@@ -1,0 +1,25 @@
+machine:
+  environment:
+    GRADLE_OPTS: '-Dorg.gradle.jvmargs="-Xmx3g -XX:+HeapDumpOnOutOfMemoryError"'
+
+dependencies:
+  pre:
+    - cp -r "circle-ci/licenses/" "/usr/local/android-sdk-linux/"
+  cache_directories:
+    - ~/.android
+
+test:
+  override:
+    # Runner 0
+    # Build debug apk.
+    # Copy apk file to CircleCI artifacts dir
+
+    # Runner 1
+    # Run unit tests
+    # Copy the test results to the test results dir
+
+    - case $CIRCLE_NODE_INDEX in 0) ./gradlew assembleCi ;; 1) ./gradlew testCiUnitTest ;; esac:
+        parallel: true
+
+    - case $CIRCLE_NODE_INDEX in 0) cp -r app/build/outputs $CIRCLE_ARTIFACTS ;; 1) ./gradlew testCiUnitTest ;; esac:
+        parallel: true
