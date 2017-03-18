@@ -40,6 +40,7 @@ android {
             shrinkResources false
             signingConfig signingConfigs.debug
             applicationIdSuffix '.debug'
+            testCoverageEnabled false
         }
         ci {
             debuggable true
@@ -126,9 +127,11 @@ dependencies {
 
     // Debug using chrome dev tools
     debugCompile "com.facebook.stetho:stetho:$stetho_version"
+    ciCompile "com.facebook.stetho:stetho:$stetho_version"
     compile "com.facebook.stetho:stetho-okhttp3:$stetho_version"
     // Find memory leaks
     debugCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+    ciCompile "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
 
 //    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
 //        exclude group: 'com.android.support', module: 'support-annotations'
