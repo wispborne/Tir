@@ -11,7 +11,7 @@ import com.thunderclouddev.goodreadsapisdk.model.feed.Feed
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReadStatus
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReadStatusFeedItem
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReviewFeedItem
-import org.threeten.bp.Instant
+import org.threeten.bp.format.DateTimeFormatter
 import java.lang.RuntimeException
 
 /**
@@ -40,23 +40,21 @@ internal object ModelMapper {
                 ratingsCount = apiBook.ratingsCount,
                 description = apiBook.description,
                 published = apiBook.published,
-                authors = mapAuthorsApiToView(apiBook.authors.items))
+                authors = apiBook.authors.items.plus(apiBook.author)
+                        .map { mapAuthorsApiToView(it) }
+        )
     }
 
-    internal fun mapAuthorsApiToView(apiAuthors: ArrayList<com.thunderclouddev.goodreadsapisdk.api.Author>): List<Author> {
-        return apiAuthors
-                .map { (id, name, link, imageUrl, role, smallImageUrl, averageRating, ratingsCount, textReviewsCount) ->
-                    Author(id = id,
-                            name = name,
-                            link = link,
-                            imageUrl = imageUrl,
-                            role = role,
-                            smallImageUrl = smallImageUrl,
-                            averageRating = averageRating,
-                            ratingsCount = ratingsCount,
-                            textReviewsCount = textReviewsCount)
-                }
-    }
+    internal fun mapAuthorsApiToView(apiAuthor: com.thunderclouddev.goodreadsapisdk.api.Author) =
+            Author(id = apiAuthor.id,
+                    name = apiAuthor.name,
+                    link = apiAuthor.link,
+                    imageUrl = apiAuthor.imageUrl,
+                    role = apiAuthor.role,
+                    smallImageUrl = apiAuthor.smallImageUrl,
+                    averageRating = apiAuthor.averageRating,
+                    ratingsCount = apiAuthor.ratingsCount,
+                    textReviewsCount = apiAuthor.textReviewsCount)
 
     internal fun mapFeedApiToView(updates: Updates) = Feed(
             updates.updates.map { update ->
@@ -74,7 +72,7 @@ internal object ModelMapper {
             update.link,
             update.imageUrl,
             mapActorApiToView(update.actor),
-            update.updatedAt.toInstant(defaultValue = Instant.MIN),
+            update.updatedAt.toInstant(formatter = DateTimeFormatter.RFC_1123_DATE_TIME),
             mapReadStatusApiToView(update.updateObject)
     )
 
@@ -83,7 +81,7 @@ internal object ModelMapper {
             update.link,
             update.imageUrl,
             mapActorApiToView(update.actor),
-            update.updatedAt.toInstant(defaultValue = Instant.MIN),
+            update.updatedAt.toInstant(formatter = DateTimeFormatter.RFC_1123_DATE_TIME),
             mapBookApiToView(update.updateObject.book)
     )
 
@@ -91,10 +89,17 @@ internal object ModelMapper {
             reviewId = updateObject.readStatus.reviewId,
             userId = updateObject.readStatus.userId,
             oldStatus = updateObject.readStatus.oldStatus,
-            status = updateObject.readStatus.status,
-            updatedAt = updateObject.readStatus.updatedAt.toInstant(Instant.MIN),
+            status = mapStatusApiToView(updateObject),
+            updatedAt = updateObject.readStatus.updatedAt.toInstant(),
             review = mapReviewApiToView(updateObject.readStatus.review)
     )
+
+    internal fun mapStatusApiToView(updateObject: UpdateObject) = when (updateObject.readStatus.status) {
+        "to-read" -> ReadStatus.Status.ToRead
+        "read" -> ReadStatus.Status.Read
+        "currently-reading" -> ReadStatus.Status.IsReading
+        else -> ReadStatus.Status.CustomShelf.apply { shelf = updateObject.readStatus.status }
+    }
 
     internal fun mapReviewApiToView(review: com.thunderclouddev.goodreadsapisdk.api.Review) = Review(
             id = review.id,

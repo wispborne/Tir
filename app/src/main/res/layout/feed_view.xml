@@ -10,15 +10,41 @@
                  android:layout_height="match_parent"
                  android:orientation="vertical">
 
-        <android.support.v4.widget.SwipeRefreshLayout
-            android:id="@+id/feed_refreshLayout"
+        <ViewAnimator
+            android:id="@+id/feed_switcher"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <android.support.v7.widget.RecyclerView
-                android:id="@+id/feed_recyclerView"
+            <LinearLayout
+                android:id="@+id/feed_signInLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"/>
-        </android.support.v4.widget.SwipeRefreshLayout>
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Please sign in"/>
+
+                <Button
+                    android:id="@+id/feed_signInButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Sign in"/>
+            </LinearLayout>
+
+            <android.support.v4.widget.SwipeRefreshLayout
+                android:id="@+id/feed_refreshLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacingSmall_half">
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/feed_recyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </android.support.v4.widget.SwipeRefreshLayout>
+        </ViewAnimator>
     </FrameLayout>
 </layout>

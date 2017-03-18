@@ -5,6 +5,7 @@ import com.facebook.stetho.Stetho
 import com.facebook.stetho.okhttp3.StethoInterceptor
 import com.github.scribejava.core.oauth.OAuth10aService
 import com.jakewharton.threetenabp.AndroidThreeTen
+import com.readystatesoftware.chuck.ChuckInterceptor
 import com.squareup.leakcanary.LeakCanary
 import com.thunderclouddev.goodreadsapisdk.GoodreadsApi
 import com.thunderclouddev.goodreadsapisdk.api.GoodreadsOAuthApi
@@ -47,6 +48,7 @@ class BaseApp : Application() {
 
         val builder = OkHttpClient.Builder()
                 .addNetworkInterceptor(OAuth1Interceptor(goodreadsOAuthService))
+                .addInterceptor(ChuckInterceptor(this))
 
         if (BuildConfig.DEBUG) {
             builder.addNetworkInterceptor(StethoInterceptor())

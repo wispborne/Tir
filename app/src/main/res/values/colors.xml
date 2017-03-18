@@ -4,5 +4,12 @@
     <color name="colorPrimaryDark">#CDC7BA</color>
     <color name="colorAccent">#382110</color>
 
-    <color name="white">#FFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="white_transparent">#c9ffffff</color>
+    <color name="gray">#E0E0E0</color>
+    <color name="grayDark">#bdbdbd</color>
+    <color name="black">#000</color>
+    <color name="yellow">#FFD600</color>
+
+    <color name="textHint">@color/grayDark</color>
 </resources>

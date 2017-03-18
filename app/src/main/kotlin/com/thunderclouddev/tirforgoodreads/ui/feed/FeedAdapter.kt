@@ -22,6 +22,14 @@ class FeedAdapter : SortedListAdapter<ReadStatusViewModel>(ReadStatusViewModel::
     override fun areItemContentsTheSame(oldItem: ReadStatusViewModel, newItem: ReadStatusViewModel)
             = oldItem.status.get().toString() == newItem.status.get().toString()
 
+    fun onCreate() = items()
+            .filterIsInstance<ReadStatusViewModel>()
+            .forEach { it.onCreate() }
+
+    fun onStart() = items()
+            .filterIsInstance<ReadStatusViewModel>()
+            .forEach { it.onStart() }
+
     data class ViewHolder(private val binding: FeedItemReadstatusBinding)
         : BaseRecyclerViewAdapter.ViewHolder<ReadStatusViewModel>(binding) {
         override fun performBind(viewModel: ReadStatusViewModel) {

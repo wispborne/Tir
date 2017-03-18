@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Tir</string>
+    <string name="book_authorBy">by %1$s</string>
+
+    <string name="update_status_currentlyReading">&lt;b>%1$s&lt;/b> is currently reading a book</string>
+    <string name="update_status_wantsToRead">&lt;b>%1$s&lt;/b> wants to read a book</string>
+    <string name="update_status_finishedReading">&lt;b>%1$s&lt;/b> has finished reading a book</string>
+    <string name="update_status_changedShelf">&lt;b>%1$s&lt;/b> moved a book to &lt;b>%2$s&lt;/b></string>
 </resources>

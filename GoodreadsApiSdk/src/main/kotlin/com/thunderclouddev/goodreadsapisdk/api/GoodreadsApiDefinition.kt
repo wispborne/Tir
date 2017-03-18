@@ -3,6 +3,7 @@ package com.thunderclouddev.goodreadsapisdk.api
 import io.reactivex.Single
 import retrofit2.http.GET
 import retrofit2.http.Path
+import retrofit2.http.QueryMap
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -14,5 +15,5 @@ internal interface GoodreadsApiDefinition {
     fun getAuthorBooks(@Path("authorId") authorId: String): Single<BooksByAuthorResponse>
 
     @GET("/updates/friends.xml")
-    fun getFriendUpdates(): Single<FriendUpdatesResponse>
+    fun getFriendUpdates(@QueryMap options: Map<String, String> = emptyMap()): Single<FriendUpdatesResponse>
 }

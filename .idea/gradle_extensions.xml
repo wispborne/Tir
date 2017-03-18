@@ -14,6 +14,7 @@
             <prop name="gradle_version">2.3.0</prop>
             <prop name="junit_version">4.12</prop>
             <task name="checkCiManifest" type="com.android.build.gradle.internal.tasks.CheckManifest">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComAndroidSupportConstraintConstraintLayout101Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.android.support.constraint:constraint-layout:1.0.1&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateCiAssets">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="jacocoTestReleaseUnitTestReport" type="org.gradle.testing.jacoco.tasks.JacocoReport">Generates Jacoco coverage reports for the release variant.&lt;p&gt;&lt;i&gt;Task group: Reporting&lt;i&gt;</task>
             <task name="projects" type="org.gradle.api.tasks.diagnostics.ProjectReportTask">Displays the sub-projects of root project 'TirforGoodreads'.&lt;p&gt;&lt;i&gt;Task group: help&lt;i&gt;</task>
@@ -33,6 +34,7 @@
             <task name="compileDebugSources">&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="packageCi" type="com.android.build.gradle.tasks.PackageApplication">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="prepareComFacebookStethoStethoOkhttp3142Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.facebook.stetho:stetho-okhttp3:1.4.2&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComReadystatesoftwareChuckLibrary104Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.readystatesoftware.chuck:library:1.0.4&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="deviceCheck">Runs all device checks using Device Providers and Test Servers.&lt;p&gt;&lt;i&gt;Task group: verification&lt;i&gt;</task>
             <task name="generateCiResValues" type="com.android.build.gradle.tasks.GenerateResValues">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="transformNativeLibsWithMergeJniLibsForCi" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -41,6 +43,7 @@
             <task name="compileReleaseNdk" type="com.android.build.gradle.tasks.NdkCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugJavaWithJavac" type="com.android.build.gradle.tasks.factory.AndroidJavaCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileCiUnitTestKotlin" type="org.jetbrains.kotlin.gradle.tasks.KotlinCompile">Compiles the ciUnitTest kotlin.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComAndroidSupportCardviewV72530Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.android.support:cardview-v7:25.3.0&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateDebugAndroidTestBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="cleanBuildCache" type="com.android.build.gradle.tasks.CleanBuildCache">Deletes the build cache directory.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="assembleDefault">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -200,6 +203,7 @@
             <task name="testReleaseUnitTest" type="com.android.build.gradle.tasks.factory.AndroidUnitTest">Run unit tests for the release build.&lt;p&gt;&lt;i&gt;Task group: verification&lt;i&gt;</task>
             <task name="preCiUnitTestBuild">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="mergeDebugShaders" type="com.android.build.gradle.tasks.MergeSourceSetFolders">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComReadystatesoftwareChuckLibraryNoOp104Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.readystatesoftware.chuck:library-no-op:1.0.4&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugKotlin" type="org.jetbrains.kotlin.gradle.tasks.KotlinCompile">Compiles the debug kotlin.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileReleaseRenderscript" type="com.android.build.gradle.tasks.RenderscriptCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="assembleDebug">Assembles all Debug builds.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
@@ -580,6 +584,7 @@
             <ext name="jacocoAndroidUnitTestReport" type="com.dicedmelon.gradle.jacoco.android.JacocoAndroidUnitTestReportExtension" />
             <ext name="jacoco" type="org.gradle.testing.jacoco.plugins.JacocoPluginExtension" />
             <task name="checkCiManifest" type="com.android.build.gradle.internal.tasks.CheckManifest">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComAndroidSupportConstraintConstraintLayout101Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.android.support.constraint:constraint-layout:1.0.1&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateCiAssets">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="jacocoTestReleaseUnitTestReport" type="org.gradle.testing.jacoco.tasks.JacocoReport">Generates Jacoco coverage reports for the release variant.&lt;p&gt;&lt;i&gt;Task group: Reporting&lt;i&gt;</task>
             <task name="projects" type="org.gradle.api.tasks.diagnostics.ProjectReportTask">Displays the sub-projects of project ':app'.&lt;p&gt;&lt;i&gt;Task group: help&lt;i&gt;</task>
@@ -597,6 +602,7 @@
             <task name="compileDebugSources">&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="packageCi" type="com.android.build.gradle.tasks.PackageApplication">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="prepareComFacebookStethoStethoOkhttp3142Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.facebook.stetho:stetho-okhttp3:1.4.2&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComReadystatesoftwareChuckLibrary104Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.readystatesoftware.chuck:library:1.0.4&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="deviceCheck">Runs all device checks using Device Providers and Test Servers.&lt;p&gt;&lt;i&gt;Task group: verification&lt;i&gt;</task>
             <task name="generateCiResValues" type="com.android.build.gradle.tasks.GenerateResValues">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="transformNativeLibsWithMergeJniLibsForCi" type="com.android.build.gradle.internal.pipeline.TransformTask">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -605,6 +611,7 @@
             <task name="compileReleaseNdk" type="com.android.build.gradle.tasks.NdkCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileCiUnitTestKotlin" type="org.jetbrains.kotlin.gradle.tasks.KotlinCompile">Compiles the ciUnitTest kotlin.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugJavaWithJavac" type="com.android.build.gradle.tasks.factory.AndroidJavaCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComAndroidSupportCardviewV72530Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.android.support:cardview-v7:25.3.0&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="generateDebugAndroidTestBuildConfig" type="com.android.build.gradle.tasks.GenerateBuildConfig">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="cleanBuildCache" type="com.android.build.gradle.tasks.CleanBuildCache">Deletes the build cache directory.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>
             <task name="compileDebugAndroidTestShaders" type="com.android.build.gradle.tasks.ShaderCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
@@ -748,6 +755,7 @@
             <task name="testReleaseUnitTest" type="com.android.build.gradle.tasks.factory.AndroidUnitTest">Run unit tests for the release build.&lt;p&gt;&lt;i&gt;Task group: verification&lt;i&gt;</task>
             <task name="preCiUnitTestBuild">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="mergeDebugShaders" type="com.android.build.gradle.tasks.MergeSourceSetFolders">&lt;i&gt;Task group: other&lt;i&gt;</task>
+            <task name="prepareComReadystatesoftwareChuckLibraryNoOp104Library" type="com.android.build.gradle.internal.tasks.PrepareLibraryTask">Prepare com.readystatesoftware.chuck:library-no-op:1.0.4&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileDebugKotlin" type="org.jetbrains.kotlin.gradle.tasks.KotlinCompile">Compiles the debug kotlin.&lt;p&gt;&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="compileReleaseRenderscript" type="com.android.build.gradle.tasks.RenderscriptCompile">&lt;i&gt;Task group: other&lt;i&gt;</task>
             <task name="assembleDebug">Assembles all Debug builds.&lt;p&gt;&lt;i&gt;Task group: build&lt;i&gt;</task>

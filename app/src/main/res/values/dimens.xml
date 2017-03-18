@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="spacingHuge">32dp</dimen>
+    <dimen name="spacingLarge">24dp</dimen>
+    <dimen name="spacingMedium">16dp</dimen>
+    <dimen name="spacingSmall">8dp</dimen>
+    <dimen name="spacingSmall_half">4dp</dimen>
+    <dimen name="spacingTiny">4dp</dimen>
+    <dimen name="spacingMicro">2dp</dimen>
+
+    <dimen name="textTitle">20sp</dimen>
+    <dimen name="textSubtitle">16sp</dimen>
+    <dimen name="textBody">14sp</dimen>
+    <dimen name="textHint">12sp</dimen>
+</resources>

@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:binding="http://schemas.android.com/apk/res-auto">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:binding="http://schemas.android.com/apk/res-auto"
+    >
 
     <data>
 
@@ -9,26 +11,88 @@
             type="com.thunderclouddev.tirforgoodreads.ui.feed.ReadStatusViewModel"/>
     </data>
 
-    <LinearLayout
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_margin="@dimen/spacingSmall_half">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="vertical"
+            android:padding="@dimen/spacingSmall">
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginBottom="@dimen/spacingMedium"-->
+            <!--android:orientation="horizontal">-->
 
             <ImageView
-                android:layout_width="64dp"
-                android:layout_height="64dp"
-                binding:imageUri="@{viewModel.imageUrl}"/>
+                android:id="@+id/feed_item_profileImage"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                binding:imageUri="@{viewModel.profileImageUrl}"
+                binding:layout_constraintLeft_toLeftOf="parent"
+                binding:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/feed_item_actionText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:hint="Action Status"
+                binding:htmlText="@{viewModel.status}"
+                binding:layout_constraintLeft_toRightOf="@+id/feed_item_profileImage"
+                binding:layout_constraintTop_toTopOf="@+id/feed_item_profileImage"
+                />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{viewModel.status}"/>
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/spacingTiny"
+                android:hint="x hrs"
+                android:textColor="@color/textHint"
+                binding:layout_constraintLeft_toRightOf="@+id/feed_item_profileImage"
+                binding:layout_constraintTop_toBottomOf="@+id/feed_item_actionText"
+                binding:timeStamp="@{viewModel.timeStamp}"/>
 
-        </LinearLayout>
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/feed_item_bookCover"
+                android:layout_width="80dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="@dimen/spacingLarge"
+                android:scaleType="fitStart"
+                android:src="@drawable/book"
+                binding:imageUri="@{viewModel.bookCoverImageUrl}"
+                binding:layout_constraintTop_toBottomOf="@+id/feed_item_profileImage"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:hint="Book title"
+                android:text="@{viewModel.bookTitle}"
+                binding:layout_constraintLeft_toRightOf="@+id/feed_item_bookCover"
+                binding:layout_constraintTop_toTopOf="@+id/feed_item_bookCover"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="@dimen/spacingTiny"
+                android:hint="by author"
+                android:text="@{viewModel.author}"
+                android:textColor="@color/textHint"
+                binding:layout_constraintLeft_toRightOf="@+id/feed_item_bookCover"
+                binding:layout_constraintTop_toBottomOf="@+id/textView"/>
+
+            <!--</LinearLayout>-->
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
 </layout>

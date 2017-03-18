@@ -11,7 +11,14 @@ data class ReadStatus(
         val reviewId: Int,
         val userId: Int,
         val oldStatus: String,
-        val status: String,
+        val status: Status,
         val updatedAt: Instant,
         val review: Review
-) : FeedItem.FeedObject
+) : FeedItem.FeedObject {
+    enum class Status(var shelf: String = "") {
+        Read,
+        ToRead,
+        IsReading,
+        CustomShelf
+    }
+}

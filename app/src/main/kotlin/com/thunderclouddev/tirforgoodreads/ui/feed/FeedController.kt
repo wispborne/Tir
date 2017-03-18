@@ -1,5 +1,6 @@
 package com.thunderclouddev.tirforgoodreads.ui.feed
 
+import android.app.Activity
 import android.databinding.DataBindingUtil
 import android.net.Uri
 import android.support.v7.widget.LinearLayoutManager
@@ -13,6 +14,7 @@ import com.thunderclouddev.tirforgoodreads.BaseApp
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.databinding.FeedViewBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
+import com.thunderclouddev.tirforgoodreads.ui.StringResource
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
@@ -23,6 +25,9 @@ import org.fuckboilerplate.rx_social_connect.query_string.QueryStringStrategy
  * @author David Whitman on 15 Mar, 2017.
  */
 class FeedController : Controller() {
+    private val SIGNIN_LAYOUT_INDEX = 0
+    private val FEED_LAYOUT_INDEX = 1
+
     private lateinit var binding: FeedViewBinding
     private lateinit var feedAdapter: FeedAdapter
 
@@ -30,23 +35,67 @@ class FeedController : Controller() {
         addLifecycleListener(object : LifecycleListener() {
             override fun postAttach(controller: Controller, view: View) {
                 super.postAttach(controller, view)
-                refresh()
+                onPostAttach()
             }
         })
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup): View {
         binding = DataBindingUtil.inflate<FeedViewBinding>(inflater, R.layout.feed_view, container, false)
+        initFeedUi()
+        return binding.root
+    }
 
+    private fun onPostAttach() {
+        var hasToken = false
+
+        try {
+            RxSocialConnect.getTokenOAuth1(BaseApp.goodreadsOAuthService.api.javaClass)
+                    .blockingFirst()
+            hasToken = true
+        } catch (ignored: Exception) {
+        }
+
+        TimberKt.v { "Found token: $hasToken" }
+
+        if (hasToken) {
+            binding.feedSwitcher.displayedChild = FEED_LAYOUT_INDEX
+            refresh()
+        } else {
+            binding.feedSwitcher.displayedChild = SIGNIN_LAYOUT_INDEX
+            binding.feedSignInButton.setOnClickListener {
+                QueryString.PARSER.replaceStrategyOAuth1(object : QueryStringStrategy {
+                    override fun extractCode(uri: Uri): String {
+                        return uri.getQueryParameter("oauth_token")
+                    }
+
+                    override fun extractError(uri: Uri): String? {
+                        return uri.getQueryParameter("error")
+                    }
+                })
+                RxSocialConnect.with(activity, BaseApp.goodreadsOAuthService)
+                        .singleOrError()
+                        .subscribe { response ->
+                            Toast.makeText(response.targetUI(), "Sign in successful", Toast.LENGTH_SHORT).show()
+                            TimberKt.d { "Acquired token: ${response.token().token}" }
+                            refresh()
+                        }
+            }
+        }
+
+        feedAdapter.onCreate()
+    }
+
+    override fun onActivityStarted(activity: Activity) {
+        super.onActivityStarted(activity)
+        feedAdapter.onStart()
+    }
+
+    private fun initFeedUi() {
         binding.feedRecyclerView.layoutManager = LinearLayoutManager(activity)
         feedAdapter = FeedAdapter()
         binding.feedRecyclerView.adapter = feedAdapter
-
-        binding.feedRefreshLayout.setOnRefreshListener {
-            refresh()
-        }
-
-        return binding.root // for now
+        binding.feedRefreshLayout.setOnRefreshListener { refresh() }
     }
 
     private fun refresh() {
@@ -54,34 +103,17 @@ class FeedController : Controller() {
     }
 
     private fun getFeed() {
-        QueryString.PARSER.replaceStrategyOAuth1(object : QueryStringStrategy {
-            override fun extractCode(uri: Uri): String {
-                return uri.getQueryParameter("oauth_token")
-            }
+        val stringResource = StringResource(activity!!.resources)
 
-            override fun extractError(uri: Uri): String? {
-                return uri.getQueryParameter("error")
-            }
-
-        })
-
-        RxSocialConnect.with(activity, BaseApp.goodreadsOAuthService)
-                .singleOrError()
-                .doAfterSuccess { response ->
-                    Toast.makeText(response.targetUI(), response.token().token, Toast.LENGTH_LONG).show()
-                    TimberKt.d { response.token().token }
-                }
-                .flatMap {
-                    BaseApp.data.queryFriendUpdates()
-                            .subscribeOn(Schedulers.io())
-                            .observeOn(AndroidSchedulers.mainThread())
-                }
+        BaseApp.data.queryFriendUpdates()
+                .subscribeOn(Schedulers.io())
+                .observeOn(AndroidSchedulers.mainThread())
                 .doAfterTerminate { binding.feedRefreshLayout.isRefreshing = false }
                 .subscribe({ author ->
                     TimberKt.d { author.toString() }
                     feedAdapter.edit().replaceAll(author.items
                             .filterIsInstance(ReadStatusFeedItem::class.java)
-                            .map(::ReadStatusViewModel))
+                            .map { ReadStatusViewModel(it, stringResource) })
                             .commit()
                 }, { error ->
                     TimberKt.e(error, { error.toString() })

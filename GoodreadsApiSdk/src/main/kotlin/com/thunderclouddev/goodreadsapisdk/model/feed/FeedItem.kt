@@ -19,6 +19,7 @@ interface FeedItem {
     enum class Type {
         ReadStatus,
         Review,
+        Book,
         Unknown
     }
 }
