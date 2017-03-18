@@ -1,8 +1,9 @@
-package com.thunderclouddev.tirforgoodreads
+package com.thunderclouddev.tirforgoodreads.ui
 
 import android.support.v7.util.SortedList
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import com.thunderclouddev.tirforgoodreads.ui.BaseRecyclerViewAdapter
 import java.util.*
 
 /**

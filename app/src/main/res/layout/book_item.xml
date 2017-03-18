@@ -5,7 +5,7 @@
 
         <variable
             name="book"
-            type="com.thunderclouddev.tirforgoodreads.viewbooks.ViewBooksAdapter.BookViewModel"/>
+            type="com.thunderclouddev.tirforgoodreads.ui.viewbooks.ViewBooksAdapter.BookViewModel"/>
     </data>
 
     <LinearLayout

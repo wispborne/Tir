@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads
+package com.thunderclouddev.tirforgoodreads.ui
 
 import android.databinding.ViewDataBinding
 import android.support.v7.widget.RecyclerView

@@ -1,15 +1,15 @@
-package com.thunderclouddev.tirforgoodreads.viewbooks
+package com.thunderclouddev.tirforgoodreads.ui.viewbooks
 
 import android.databinding.DataBindingUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.squareup.picasso.Picasso
 import com.thunderclouddev.goodreadsapisdk.model.Book
-import com.thunderclouddev.tirforgoodreads.BaseRecyclerViewAdapter
 import com.thunderclouddev.tirforgoodreads.R
-import com.thunderclouddev.tirforgoodreads.SortedListAdapter
 import com.thunderclouddev.tirforgoodreads.databinding.BookItemBinding
 import com.thunderclouddev.tirforgoodreads.getOrDefaultIfNullOrBlank
+import com.thunderclouddev.tirforgoodreads.ui.BaseRecyclerViewAdapter
+import com.thunderclouddev.tirforgoodreads.ui.SortedListAdapter
 
 /**
  * @author David Whitman on 11 Mar, 2017.

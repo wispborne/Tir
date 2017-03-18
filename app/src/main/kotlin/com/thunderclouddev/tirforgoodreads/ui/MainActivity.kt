@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads
+package com.thunderclouddev.tirforgoodreads.ui
 
 import android.os.Bundle
 import android.support.v7.app.ActionBar
@@ -11,8 +11,9 @@ import com.bluelinelabs.conductor.RouterTransaction
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.R.id
 import com.thunderclouddev.tirforgoodreads.R.layout
+import com.thunderclouddev.tirforgoodreads.ui.ActionBarProvider
 import com.thunderclouddev.tirforgoodreads.ui.feed.FeedController
-import com.thunderclouddev.tirforgoodreads.viewbooks.ViewBooksController
+import com.thunderclouddev.tirforgoodreads.ui.viewbooks.ViewBooksController
 
 /**
  * Created by David Whitman on 11 Mar, 2017.
@@ -27,7 +28,7 @@ class MainActivity : AppCompatActivity(), ActionBarProvider {
         super.onCreate(savedInstanceState)
 
         setContentView(layout.main_activity)
-        setSupportActionBar(findViewById(R.id.toolbar) as Toolbar)
+        setSupportActionBar(findViewById(id.toolbar) as Toolbar)
 
         router = Conductor.attachRouter(this, findViewById(id.controller_container) as ViewGroup,
             savedInstanceState)

@@ -3,7 +3,7 @@ package com.thunderclouddev.tirforgoodreads.ui.feed
 import android.databinding.ObservableField
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReadStatus
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReadStatusFeedItem
-import com.thunderclouddev.tirforgoodreads.BaseRecyclerViewAdapter
+import com.thunderclouddev.tirforgoodreads.ui.BaseRecyclerViewAdapter
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.isUri
 import com.thunderclouddev.tirforgoodreads.ui.StringResource

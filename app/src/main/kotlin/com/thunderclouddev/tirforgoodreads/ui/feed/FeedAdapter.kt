@@ -3,9 +3,9 @@ package com.thunderclouddev.tirforgoodreads.ui.feed
 import android.databinding.DataBindingUtil
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import com.thunderclouddev.tirforgoodreads.BaseRecyclerViewAdapter
+import com.thunderclouddev.tirforgoodreads.ui.BaseRecyclerViewAdapter
 import com.thunderclouddev.tirforgoodreads.R
-import com.thunderclouddev.tirforgoodreads.SortedListAdapter
+import com.thunderclouddev.tirforgoodreads.ui.SortedListAdapter
 import com.thunderclouddev.tirforgoodreads.databinding.FeedItemReadstatusBinding
 
 /**

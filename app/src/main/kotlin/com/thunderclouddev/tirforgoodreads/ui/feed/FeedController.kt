@@ -10,7 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import com.bluelinelabs.conductor.Controller
 import com.thunderclouddev.goodreadsapisdk.model.feed.ReadStatusFeedItem
-import com.thunderclouddev.tirforgoodreads.BaseApp
+import com.thunderclouddev.tirforgoodreads.ui.BaseApp
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.databinding.FeedViewBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt

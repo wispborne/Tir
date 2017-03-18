@@ -1,4 +1,4 @@
-package com.thunderclouddev.tirforgoodreads.viewbooks
+package com.thunderclouddev.tirforgoodreads.ui.viewbooks
 
 import android.databinding.DataBindingUtil
 import android.net.Uri
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import com.bluelinelabs.conductor.Controller
-import com.thunderclouddev.tirforgoodreads.BaseApp
+import com.thunderclouddev.tirforgoodreads.ui.BaseApp
 import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.databinding.ViewBooksBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
