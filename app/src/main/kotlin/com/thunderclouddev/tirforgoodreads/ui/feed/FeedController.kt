@@ -15,6 +15,8 @@ import com.thunderclouddev.tirforgoodreads.R
 import com.thunderclouddev.tirforgoodreads.databinding.FeedViewBinding
 import com.thunderclouddev.tirforgoodreads.logging.timberkt.TimberKt
 import com.thunderclouddev.tirforgoodreads.ui.StringResource
+import com.uber.autodispose.SingleScoper
+import com.uber.autodispose.android.ViewScopeProvider
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
 import org.fuckboilerplate.rx_social_connect.RxSocialConnect
@@ -75,9 +77,11 @@ class FeedController : Controller() {
                 })
                 RxSocialConnect.with(activity, BaseApp.goodreadsOAuthService)
                         .singleOrError()
+                        .to(SingleScoper(ViewScopeProvider.from(binding.root)))
                         .subscribe { response ->
-                            Toast.makeText(response.targetUI(), "Sign in successful", Toast.LENGTH_SHORT).show()
+                            Toast.makeText(binding.root.context, "Sign in successful", Toast.LENGTH_SHORT).show()
                             TimberKt.d { "Acquired token: ${response.token().token}" }
+                            binding.feedSwitcher.displayedChild = FEED_LAYOUT_INDEX
                             refresh()
                         }
             }
@@ -103,12 +107,13 @@ class FeedController : Controller() {
     }
 
     private fun getFeed() {
-        val stringResource = StringResource(activity!!.resources)
+        val stringResource = StringResource(binding.root.resources)
 
         BaseApp.data.queryFriendUpdates()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
                 .doAfterTerminate { binding.feedRefreshLayout.isRefreshing = false }
+                .to(SingleScoper(ViewScopeProvider.from(binding.root)))
                 .subscribe({ author ->
                     TimberKt.d { author.toString() }
                     feedAdapter.edit().replaceAll(author.items
