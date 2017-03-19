@@ -16,4 +16,7 @@ internal interface GoodreadsApiDefinition {
 
     @GET("/updates/friends.xml")
     fun getFriendUpdates(@QueryMap options: Map<String, String> = emptyMap()): Single<FriendUpdatesResponse>
+
+    @GET("/api/v3/updates/newsfeed.xm")
+    fun getFriendUpdatesV3(@QueryMap options: Map<String, String> = emptyMap()): Single<FriendUpdatesResponse>
 }

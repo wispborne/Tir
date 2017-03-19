@@ -29,7 +29,7 @@ class Data(private val apiDefinition: GoodreadsApi, private val database: Requer
             }
             .toCompletable()
 
-    fun queryFriendUpdates(): Single<Feed> = apiDefinition.getFriendUpdates()
+    fun queryFriendUpdates(): Single<Feed> = apiDefinition.getFriendUpdatesV3()
             .doOnSuccess {
                 // Cache results
             }

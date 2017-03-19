@@ -30,14 +30,37 @@ class GoodreadsApi(okHttpClient: OkHttpClient) {
     fun getAuthorBooks(authorId: String): Single<List<Book>> = goodreadsApiDefinition.getAuthorBooks(authorId)
             .map { it.author.books.items.map { ModelMapper.mapBookApiToView(it) } }
 
+    /**
+     * The parameters don't work. Api problem.
+     */
     fun getFriendUpdates(updateType: FeedItem.Type? = null,
                          updateFilter: UpdateFilter? = null,
-                         take: Int? = null,
-                         nonSocialOnly: Boolean = false,
-                         skipCache: Boolean = true,
-                         largeBookCovers: Boolean = true,
-                         previewInfo: Boolean = true,
-                         buyLinks: Boolean = false): Single<Feed> = goodreadsApiDefinition.getFriendUpdates(mapOf(
+                         take: Int? = null): Single<Feed> = goodreadsApiDefinition.getFriendUpdates(mapOf(
+            Pair("update", when (updateType) {
+                FeedItem.Type.ReadStatus -> "statuses"
+                FeedItem.Type.Book -> "books"
+                FeedItem.Type.Review -> "reviews"
+                else -> ""
+            }),
+            Pair("update_filter", when (updateFilter) {
+                UpdateFilter.Following -> "following"
+                UpdateFilter.TopFriends -> "top_friends"
+                UpdateFilter.Friends -> "friends"
+                else -> ""
+            }),
+            Pair("max_updates", take?.toString() ?: "")
+    ))
+            .map { ModelMapper.mapFeedApiToView(it.updates) }
+
+
+    fun getFriendUpdatesV3(updateType: FeedItem.Type? = null,
+                           updateFilter: UpdateFilter? = null,
+                           take: Int? = null,
+                           nonSocialOnly: Boolean = false,
+                           skipCache: Boolean = true,
+                           largeBookCovers: Boolean = true,
+                           previewInfo: Boolean = true,
+                           buyLinks: Boolean = false): Single<Feed> = goodreadsApiDefinition.getFriendUpdatesV3(mapOf(
             Pair("update", when (updateType) {
                 FeedItem.Type.ReadStatus -> "statuses"
                 FeedItem.Type.Book -> "books"

@@ -10,6 +10,7 @@ import com.readystatesoftware.chuck.ChuckInterceptor
 import com.squareup.leakcanary.LeakCanary
 import com.thunderclouddev.goodreadsapisdk.GoodreadsApi
 import com.thunderclouddev.goodreadsapisdk.api.GoodreadsOAuthApi
+import com.thunderclouddev.goodreadsapisdk.api.GoodreadsV3OAuthApi
 import com.thunderclouddev.tirforgoodreads.BuildConfig
 import com.thunderclouddev.tirforgoodreads.api.OAuth1Interceptor
 import com.thunderclouddev.tirforgoodreads.database.Data
@@ -27,6 +28,7 @@ class BaseApp : Application() {
     companion object {
         lateinit var data: Data
         lateinit var goodreadsOAuthService: OAuth10aService
+        lateinit var goodreadsV3OAuthService: OAuth10aService
     }
 
     override fun onCreate() {
@@ -47,6 +49,15 @@ class BaseApp : Application() {
                 .apiSecret("qlhTxMwfzA7eOeCVKNiG9BeCjwuaf6xo7F2Jjqsfzeo")
                 .callback(GoodreadsOAuthApi.CALLBACK_URI)
                 .build(GoodreadsOAuthApi())
+
+        // To get this working, need to call /oauth/grant_access_token.xml
+        // with user[email] and user[password] as request text params.
+        // The api will return a token
+        goodreadsV3OAuthService = ServiceBuilder()
+                .apiKey("==w7irqdUT3mB4Aoz/aaBXNr") // TODO move these
+                .apiSecret("XvluHUeAIAa1CPlNow8tPsTfEOjvV0r2KQCbSgOh")
+                .callback(GoodreadsV3OAuthApi.CALLBACK_URI)
+                .build(GoodreadsV3OAuthApi())
 
         val builder = OkHttpClient.Builder()
                 .addNetworkInterceptor(OAuth1Interceptor(goodreadsOAuthService))
